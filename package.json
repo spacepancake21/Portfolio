@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My Portfolio Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spacepancake21/Portfolio.git"
+  },
+  "author": "Konstantin Davydov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spacepancake21/Portfolio/issues"
+  },
+  "homepage": "https://github.com/spacepancake21/Portfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.6",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

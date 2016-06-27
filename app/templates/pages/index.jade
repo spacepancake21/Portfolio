@@ -2,4 +2,76 @@ extends ../layouts/layout.jade
 
 block content
 
-	h1 Тестовый заголовок!
+	.wrapper.welcome
+
+		.welcome__btn-wrap
+			a.welcome__btn(href="#", title="Авторизоваться") Авторизоваться
+
+		.welcome__block
+			.welcome__block-inner
+
+				.welcome__welcome
+					.welcome__img-wrap
+						img.welcome__img(src="img/design/avatar.jpg", alt="User")
+
+					.welcome__user-name Константин Давыдов
+					.welcome__user-title Личный сайт веб разработчика
+
+					ul.social
+						li.social__item.social__item_vk
+							a.social__link(href="#", title="Vkontakte" target="_blank")
+								span.social__title Vkontakte
+								include ../svg/vk.jade
+						li.social__item.social__item_gh
+							a.social__link(href="#", title="Github" target="_blank")
+								span.social__title Github
+								include ../svg/github.jade
+						li.social__item.social__item_ig
+							a.social__link(href="#", title="Instagram" target="_blank")
+								span.social__title Instagram
+								include ../svg/in.jade
+
+					.welcome__menu
+						ul.welcome__menu-inner
+							li.welcome__menu-item
+								a.welcome__menu-link(href="#", title="") Мои работы
+							li.welcome__menu-item
+								a.welcome__menu-link(href="#", title="") Обо мне
+							li.welcome__menu-item
+								a.welcome__menu-link(href="#", title="") Блог
+
+				.welcome__login
+					.welcome__login-title Авторизуйтесь
+
+					form.form
+						.form__row
+							.form__input-ico
+								.form__input-ico-img
+									include ../svg/login.jade
+							input.form__input(type="text", placeholder="Логин")
+						.form__row
+							.form__input-ico
+								.form__input-ico-img
+									include ../svg/password.jade
+							input.form__input(type="text", placeholder="Пароль")
+
+						.form__checkbox-wrap
+							input.form__checkbox#i-am-human(type="checkbox")
+							label.form__label.form__label_check(for="i-am-human")
+								div.form__label-text Я человек
+
+						.form__sure-text Вы точно не робот?
+
+						.form__radio-btn-wrap
+							input.form__radio-btn#human-yes(type="radio", name="human-choose")
+							label.form__label-radio(for="human-yes") Да
+
+							input.form__radio-btn#human-no(type="radio", name="human-choose")
+							label.form__label-radio(for="human-no") Не уверен
+
+					.welcome__menu
+						ul.welcome__menu-inner
+							li.welcome__menu-item
+								a.welcome__menu-link(href="#", title="На главную") На главную
+							li.welcome__menu-item
+								a.welcome__menu-link(href="#", title="Войти") Войти

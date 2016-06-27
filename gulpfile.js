@@ -23,6 +23,10 @@ var paths = {
 		main: APP_DIR + 'templates/pages/**/*.jade',
 		app: APP_DIR + 'templates/**/*.jade',
 		dist: APP_DIR
+	},
+	js: {
+		app: APP_DIR + 'js/**/*.js',
+		dist: DIST_DIR
 	}
 };
 
@@ -68,6 +72,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch(paths.sass.app, ['sass']);
 	gulp.watch(paths.jade.app, ['jade']);
+	gulp.watch(paths.js.app).on('change', browserSync.reload);
 });
 
 // default

@@ -1,22 +1,10 @@
+/*
+	FOOTER
+*/
+
 .footer {
-	margin: -$copyright-height 0 0;
-	text-align: center;
-	position: relative;
-	min-width: 320px;
-	&__copyright {
-		&-name {
-			display: block;
-			@include from_768 {
-				display: inline;
-				&:after {
-					content: " | ";
-				}
-			}
-		}
-		&-create {
-			&:after {
-				content: " | ";
-			}
-		}
-	}
+		margin: -$footer-height 0 0;
+		text-align: center;
+		position: relative;
+		min-width: 320px;
 }

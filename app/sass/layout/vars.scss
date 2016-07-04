@@ -1,39 +1,17 @@
-$font: "Roboto", sans-serif;
-$sansus-regular: "sansus_webissimoregular";
+/*
+  FONTS
+*/
+
+$roboto: "Roboto", sans-serif;
+
+$sansus-regular: "Sansus Webissimo Regular";
+
+/*
+  BASE
+*/
+
 $transition: linear 0.25s;
+
 $copyright-height: 55px;
 
-@function rem($px) {
-	@return $px / 16px + 0rem;
-}
-
-@mixin inlineblock($valign: top){
-	display: inline-block;
-	vertical-align: $valign;
-}
-
-@mixin from_768() {
-	@media screen and (min-width: 768px) {
-		@content;
-	}
-}
-
-@mixin from_1200() {
-	@media screen and (min-width: 1200px) {
-		@content;
-	}
-}
-
-@mixin from_1800() {
-	@media screen and (min-width: 1800px) {
-		@content;
-	}
-}
-
-%clearfix {
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-}
+$footer-height: 110px;

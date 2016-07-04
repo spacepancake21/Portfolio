@@ -1,0 +1,131 @@
+/* FORM */
+
+.form {
+  padding: 25px;
+
+  &__row {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 45px;
+    padding: 0 20px 0 62px;
+    border: none;
+    color: #373e42;
+
+    &:focus {
+      outline: none;
+    }
+
+    &-ico {
+      width: 45px;
+      height: 45px;
+      background: #f0efe9;
+      margin-right: -4px;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      &-img {
+        height: 17px;
+        width: 17px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+
+    }
+
+  }
+
+  &__checkbox {
+    display: none;
+
+    &-wrap {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    & + .form__label_check:before {
+      background-color: #0548be;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 13px 20px;
+    }
+
+    &:checked + .form__label_check:before {
+      background-image: url("../img/svg/check.svg");
+    }
+
+  }
+
+  &__radio-btn {
+    display: none;
+
+    & + .form__label-radio:before {
+      background: #fff;
+    }
+
+    &:checked + .form__label-radio:before {
+      background: #0548be;
+      border: 5px solid #fff;
+    }
+
+    &-wrap {
+      text-align: center;
+    }
+
+  }
+
+  &__label {
+    cursor: pointer;
+
+    &_check {
+      @include inlineblock();
+
+      &:before {
+        content: "";
+        @include inlineblock();
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        margin-right: 10px;
+      }
+
+    }
+
+    &-text {
+      @include inlineblock();
+      margin-top: 2px;
+    }
+    &-radio {
+      @include inlineblock();
+      cursor: pointer;
+      margin: 0 15px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+    }
+
+  }
+
+  &__sure-text {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+}

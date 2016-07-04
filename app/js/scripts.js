@@ -4,6 +4,8 @@ $(function() {
 
 	(function() {
 
+		// Переворачивание плашек на главной странице
+
 		$('.welcome__btn').on('click', function(e) {
 			e.preventDefault();
 			$(this).fadeOut();
@@ -11,7 +13,7 @@ $(function() {
 		});
 
 		$('.wrapper').on('click', function(e) {
-			if(e.target.className == 'wrapper welcome') {
+			if(e.target.classList.contains('welcome')) {
 				$('.welcome__btn').fadeIn();
 				$('.welcome__block').removeClass('welcome__block_flipped');
 			}

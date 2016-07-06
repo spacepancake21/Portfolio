@@ -27,6 +27,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+.clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
 body {
   font-size: 14px;
   height: 100%;
@@ -35,7 +43,7 @@ body {
   font-weight: normal;
   min-height: 650px;
 
-  @include from_768 {
+  @include from_1200 {
     font-size: 16px;
   }
 

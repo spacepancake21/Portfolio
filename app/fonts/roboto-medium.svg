@@ -390,8 +390,8 @@
 <glyph unicode="&#x2010;" horiz-adv-x="672" d="M71 521v196h525v-196h-525z" />
 <glyph unicode="&#x2011;" horiz-adv-x="672" d="M71 521v196h525v-196h-525z" />
 <glyph unicode="&#x2012;" horiz-adv-x="672" d="M71 521v196h525v-196h-525z" />
-<glyph unicode="&#x2013;" horiz-adv-x="1321" d="M152 621v196h1018v-196h-1018z" />
-<glyph unicode="&#x2014;" horiz-adv-x="1584" d="M56 621v196h1358v-196h-1358z" />
+<glyph unicode="&#x2013;" horiz-adv-x="1321" d="M158 621v196h1018v-196h-1018z" />
+<glyph unicode="&#x2014;" horiz-adv-x="1584" d="M130 621v196h1358v-196h-1358z" />
 <glyph unicode="&#x2018;" horiz-adv-x="448" d="M99 1056v138q1 96 52.5 200.5t130.5 167.5l124 -77q-91 -133 -94 -277v-152h-213z" />
 <glyph unicode="&#x2019;" horiz-adv-x="444" d="M51 1101q90 131 93 277v158h213v-138q0 -103 -52.5 -207.5t-129.5 -166.5z" />
 <glyph unicode="&#x201a;" horiz-adv-x="462" d="M50 -220q85 127 88 275v147h218v-133q-1 -93 -52 -197t-131 -170z" />

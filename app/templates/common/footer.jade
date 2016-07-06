@@ -1,55 +1,44 @@
 .footer
-
   .footer__inner
 
     .footer__text
       | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
 
-    ul.footer__menu
+    .clearfix
+      .footer__info-wrap
+        ul.footer__menu
+          li.footer__menu-item
+            a.footer__menu-link(href="#", title="Мои работы") Мои работы
+          li.footer__menu-item
+            a.footer__menu-link(href="#", title="Обо мне") Обо мне
+          li.footer__menu-item
+            a.footer__menu-link(href="#", title="Блог") Блог
+          li.footer__menu-item
+            a.footer__menu-link(href="#", title="Авторизация") Авторизация
 
-      li.footer__menu-item
-        a.footer__menu-link(href="#", title="Мои работы") Мои работы
+        ul.social.footer__social
+          li.social__item.social__item_vk
+            a.social__link(href="#", title="Vkontakte" target="_blank")
+              span.social__title Vkontakte
+              include ../svg/vk.jade
+          li.social__item.social__item_gh
+            a.social__link(href="#", title="Github" target="_blank")
+              span.social__title Github
+              include ../svg/github.jade
+          li.social__item.social__item_ig
+            a.social__link(href="#", title="Instagram" target="_blank")
+              span.social__title Instagram
+              include ../svg/in.jade
 
-      li.footer__menu-item
-        a.footer__menu-link(href="#", title="Обо мне") Обо мне
-
-      li.footer__menu-item
-        a.footer__menu-link(href="#", title="Блог") Блог
-
-      li.footer__menu-item
-        a.footer__menu-link(href="#", title="Авторизация") Авторизация
-
-    ul.social.footer__social
-
-      li.social__item.social__item_vk
-        a.social__link(href="#", title="Vkontakte" target="_blank")
-          span.social__title Vkontakte
-          include ../svg/vk.jade
-
-      li.social__item.social__item_gh
-        a.social__link(href="#", title="Github" target="_blank")
-          span.social__title Github
-          include ../svg/github.jade
-
-      li.social__item.social__item_ig
-        a.social__link(href="#", title="Instagram" target="_blank")
-          span.social__title Instagram
-          include ../svg/in.jade
-
-    ul.footer__contacts
-
-      li.footer__contacts-item skype_kdn
-
-      li.footer__contacts-item
-        a.footer__contacts-link(href="mailto: davydov_k@mail.ru")
-          | astahov@gmail.com
-
-      li.footer__contacts-item +7 931 200 93 24
-
-      li.footer__contacts-item Новосибирск, ул. Инская, д.14
+      ul.footer__contacts
+        li.footer__contacts-item skype_kdn
+        li.footer__contacts-item
+          a.footer__contacts-link(href="mailto: davydov_k@mail.ru")
+            | astahov@gmail.com
+        li.footer__contacts-item +7 931 200 93 24
+        li.footer__contacts-item Новосибирск, ул. Инская, д.14
 
   .copyright.footer__copyright
-
     span.copyright__name &copy; Константин Давыдов
     span.copyright__create создано с любовью в LoftSchool
     span.copyright__year 2016

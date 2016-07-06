@@ -58,28 +58,29 @@ body {
 /*
 	COPYRIGHTS
 */
-.copyrights {
-  margin: -55px 0 0;
+.copyright {
   font-weight: 200;
   text-align: center;
   position: relative;
   min-width: 320px;
+  margin-top: -58px;
+  padding: 12px 0;
 }
 
-.copyrights__name {
+.copyright__name {
   display: block;
 }
 
 @media screen and (min-width: 768px) {
-  .copyrights__name {
+  .copyright__name {
     display: inline;
   }
-  .copyrights__name:after {
+  .copyright__name:after {
     content: " | ";
   }
 }
 
-.copyrights__create:after {
+.copyright__create:after {
   content: " | ";
 }
 
@@ -87,10 +88,64 @@ body {
 	FOOTER
 */
 .footer {
-  margin: -110px 0 0;
+  background: #3e4049;
   text-align: center;
   position: relative;
   min-width: 320px;
+  width: 100%;
+}
+
+.footer__inner {
+  padding: 17px 10px 8px 10px;
+}
+
+.footer__text {
+  font-weight: 200;
+  text-align: center;
+  line-height: 1.6;
+  border-bottom: 1px solid #65666d;
+  padding: 0 0 13px 0;
+}
+
+.footer__menu {
+  padding: 17px 0 0 0;
+  margin: 0 0 16px 0;
+}
+
+.footer__menu-item {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: 500;
+}
+
+.footer__menu-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 4px;
+}
+
+.footer__social.social {
+  margin-bottom: 17px;
+  border-bottom: 1px solid #65666d;
+  padding-bottom: 13px;
+}
+
+.footer__social.social svg {
+  fill: #9e9fa3;
+}
+
+.footer__contacts-item {
+  margin-bottom: 7px;
+}
+
+.footer__contacts-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__copyright.copyright {
+  background: #2667d8;
+  margin-top: 0;
 }
 
 /* FORM */
@@ -312,7 +367,7 @@ body {
 .welcome:after {
   content: "";
   display: block;
-  height: 55px;
+  height: 58px;
 }
 
 .welcome__btn {
@@ -357,7 +412,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1800px) {
   .welcome__btn-wrap {
     padding: 24px 100px;
   }
@@ -490,6 +545,10 @@ body {
 
 .welcome__menu-link:hover {
   background: #083c96;
+}
+
+.welcome .copyright {
+  margin: -58px 0 0;
 }
 
 /*# sourceMappingURL=maps/styles.css.map */

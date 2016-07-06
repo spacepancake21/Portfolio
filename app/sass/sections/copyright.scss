@@ -2,12 +2,13 @@
 	COPYRIGHTS
 */
 
-.copyrights {
-  margin: -$copyright-height 0 0;
+.copyright {
   font-weight: 200;
   text-align: center;
   position: relative;
   min-width: 320px;
+  margin-top: -$copyright-height;
+  padding: 12px 0;
 
   &__name {
     display: block;

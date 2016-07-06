@@ -1,157 +1,197 @@
 .welcome {
-	background: url("../img/design/night_no_bg.jpg") no-repeat center 0;
-	background-size: cover;
-	&:after {
-		content: "";
-		display: block;
-		height: $copyright-height;
-	}
-	&__btn {
-		@include inlineblock();
-		font-weight: 500;
-		text-decoration: none;
-		color: #fff;
-		border: 1px solid #fff;
-		text-align: center;
-		padding: 11px 20px;
-		transition: background $transition, border-color $transition;
-		&:hover {
-			background: #083c96;
-			border-color: #083c96;
-		}
-		@include from_768 {
-			padding: 12px 26px;
-		}
-		&-wrap {
-			text-align: center;
-			padding: 10px;
-			margin-bottom: 20px;
-			@include from_768 {
-				padding: 20px;
-				text-align: right;
-			}
-			@include from_1200 {
-				padding: 24px 20px;
-			}
-			@include from_1200 {
-				padding: 24px 100px;
-			}
-		}
-	}
+  background: url("../img/design/night_no_bg.jpg") no-repeat center 0;
+  background-size: cover;
 
-	&__block {
-		min-width: 320px;
-		max-width: 380px;
-		height: 395px;
-		margin: auto;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		padding: 0 10px;
-		&-inner {
-			height: 100%;
-			position: relative;
-		}
-		&_flipped {
-			& .welcome__welcome {
-				transform: rotateY(-180deg);
-			}
-			& .welcome__login {
-				transform: rotateY(0deg);
-			}
-		}
-	}
+  &:after {
+    content: "";
+    display: block;
+    height: $copyright-height;
+  }
 
-	&__welcome,
-	&__login {
-		background: rgba(#1c1f29, 0.5);
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		padding: 40px 0 0 0;
+  &__btn {
+    @include inlineblock();
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 11px 20px;
+    transition: background $transition, border-color $transition;
 
-		backface-visibility: hidden;
-		transition: transform linear 0.5s;
-	}
+    &:hover {
+      background: #083c96;
+      border-color: #083c96;
+    }
 
-	&__login {
-		transform: rotateY(-180deg);
+    @include from_768 {
+      padding: 12px 26px;
+    }
 
-		background: rgba(#1c1f29, 0.5);
-		&-title {
-			font-size: 30px;
-			text-transform: uppercase;
-			text-align: center;
-			font-family: $sansus-regular;
-		}
-	}
+    &-wrap {
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 20px;
 
-	&__img {
-		max-width: 100%;
-		&-wrap {
-			height: 141px;
-			width: 141px;
-			overflow: hidden;
-			border-radius: 50%;
-			margin: 0 auto 18px;
-			@include from_768 {
-				margin: 0 auto 12px;
-			}
-		}
-	}
+      @include from_768 {
+        padding: 20px;
+        text-align: right;
+      }
 
-	&__user {
-		&-name {
-			font-size: 21px;
-			font-weight: 500;
-			text-align: center;
-			margin-bottom: 10px;
-			@include from_768 {
-				font-size: 28px;
-			}
-		}
-		&-title {
-			font-weight: 400;
-			text-align: center;
-			margin-bottom: 38px;
-			@include from_768 {
-				margin-bottom: 30px;
-			}
-		}
-	}
+      @include from_1200 {
+        padding: 24px 20px;
+      }
 
-	&__menu {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		&-inner {
-			display: table;
-			width: 100%;
-		}
-		&-item {
-			display: table-cell;
-			border-right: 2px solid #7296d3;
-			&:last-child {
-				border-right: none;
-			}
-		}
-		&-link {
-			display: block;
-			text-decoration: none;
-			color: #fff;
-			font-weight: 500;
-			background: #0548bd;
-			padding: 13px 21px;
-			text-align: center;
-			transition: background $transition;
-			&:hover {
-				background: #083c96;
-			}
-		}
-	}
+      @include from_1800 {
+        padding: 24px 100px;
+      }
+
+    }
+
+  }
+
+  &__block {
+    min-width: 320px;
+    max-width: 380px;
+    height: 395px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px;
+
+    &-inner {
+      height: 100%;
+      position: relative;
+    }
+
+    &_flipped {
+
+      & .welcome__welcome {
+        transform: rotateY(-180deg);
+      }
+
+      & .welcome__login {
+        transform: rotateY(0deg);
+      }
+
+    }
+
+  }
+
+  &__welcome,
+  &__login {
+    background: rgba(#1c1f29, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 0 0 0;
+
+    backface-visibility: hidden;
+    transition: transform linear 0.5s;
+  }
+
+  &__login {
+    transform: rotateY(-180deg);
+    background: rgba(#1c1f29, 0.5);
+
+    &-title {
+      font-size: 30px;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: $sansus-regular;
+    }
+
+  }
+
+  &__img {
+    max-width: 100%;
+
+    &-wrap {
+      height: 141px;
+      width: 141px;
+      overflow: hidden;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+
+      @include from_768 {
+        margin: 0 auto 12px;
+      }
+
+    }
+
+  }
+
+  &__user {
+    &-name {
+      font-size: 21px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 10px;
+
+      @include from_768 {
+        font-size: 28px;
+      }
+
+    }
+
+    &-title {
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 38px;
+
+      @include from_768 {
+        margin-bottom: 30px;
+      }
+
+    }
+
+  }
+
+  &__menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &-inner {
+      display: table;
+      width: 100%;
+    }
+
+    &-item {
+      display: table-cell;
+      border-right: 2px solid #7296d3;
+
+      &:last-child {
+        border-right: none;
+      }
+
+    }
+
+    &-link {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      background: #0548bd;
+      padding: 13px 21px;
+      text-align: center;
+      transition: background $transition;
+
+      &:hover {
+        background: #083c96;
+      }
+
+    }
+
+  }
+
+  & .copyright {
+    margin: -$copyright-height 0 0;
+  }
+
 }

@@ -12,7 +12,6 @@ block content
 
     .welcome__block
       .welcome__block-inner
-
         .welcome__welcome
 
           .user
@@ -27,10 +26,12 @@ block content
               a.social__link(href="#", title="Vkontakte" target="_blank")
                 span.social__title Vkontakte
                 include ../svg/vk.jade
+
             li.social__item.social__item_gh
               a.social__link(href="#", title="Github" target="_blank")
                 span.social__title Github
                 include ../svg/github.jade
+
             li.social__item.social__item_ig
               a.social__link(href="#", title="Instagram" target="_blank")
                 span.social__title Instagram
@@ -39,11 +40,13 @@ block content
           .welcome__menu
             ul.welcome__menu-inner
               li.welcome__menu-item
-                a.welcome__menu-link(href="#", title="") Мои работы
+                a.welcome__menu-link(href="works.html", title="") Мои работы
+
               li.welcome__menu-item
-                a.welcome__menu-link(href="#", title="") Обо мне
+                a.welcome__menu-link(href="about.html", title="") Обо мне
+
               li.welcome__menu-item
-                a.welcome__menu-link(href="#", title="") Блог
+                a.welcome__menu-link(href="blog.html", title="") Блог
 
         .welcome__login
           .welcome__login-title Авторизуйтесь
@@ -54,6 +57,7 @@ block content
                 .form__input-ico-img
                   include ../svg/login.jade
               input.form__input(type="text", placeholder="Логин")
+
             .form__row
               .form__input-ico
                 .form__input-ico-img
@@ -76,9 +80,13 @@ block content
 
           .welcome__menu
             ul.welcome__menu-inner
-              li.welcome__menu-item
+              li.welcome__menu-item.js-flipped-front
                 a.welcome__menu-link(href="#", title="На главную") На главную
+
               li.welcome__menu-item
                 a.welcome__menu-link(href="#", title="Войти") Войти
 
-  include ../common/copyright.jade
+  .copyright
+    span.copyright__name &copy; Константин Давыдов
+    span.copyright__create создано с любовью в LoftSchool
+    span.copyright__year 2016

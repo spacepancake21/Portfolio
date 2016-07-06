@@ -6,6 +6,11 @@ $(function() {
 
 		// Переворачивание плашек на главной странице
 
+		var flippedFront = function() {
+			$('.welcome__btn').fadeIn();
+			$('.welcome__block').removeClass('welcome__block_flipped');
+		};
+
 		$('.welcome__btn').on('click', function(e) {
 			e.preventDefault();
 			$(this).fadeOut();
@@ -14,9 +19,13 @@ $(function() {
 
 		$('.wrapper').on('click', function(e) {
 			if(e.target.classList.contains('welcome')) {
-				$('.welcome__btn').fadeIn();
-				$('.welcome__block').removeClass('welcome__block_flipped');
+			flippedFront();
 			}
+		});
+
+		$('.js-flipped-front').on('click', function(e) {
+			e.preventDefault();
+			flippedFront();
 		});
 
 	})();

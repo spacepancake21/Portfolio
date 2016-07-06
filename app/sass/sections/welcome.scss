@@ -1,6 +1,7 @@
 .welcome {
   background: url("../img/design/night_no_bg.jpg") no-repeat center 0;
   background-size: cover;
+  min-height: 100%;
 
   &:after {
     content: "";

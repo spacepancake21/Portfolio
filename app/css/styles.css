@@ -55,7 +55,6 @@ body {
 }
 
 .wrapper {
-  min-height: 100%;
   width: 100%;
   min-width: 320px;
   position: relative;
@@ -69,7 +68,7 @@ body {
   text-align: center;
   position: relative;
   min-width: 320px;
-  margin-top: -58px;
+  margin-top: -62px;
   padding: 12px 0;
 }
 
@@ -111,6 +110,14 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__inner:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
 .footer__text {
   font-weight: 200;
   text-align: center;
@@ -124,12 +131,39 @@ body {
     float: left;
     border-bottom: 0;
     border-right: 1px solid #65666d;
+    width: 34%;
+    padding: 0 9% 13px 0;
+    text-align: left;
+    min-height: 90px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__info:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__info {
+    float: left;
+    width: 66%;
   }
 }
 
 @media screen and (min-width: 768px) {
   .footer__info-wrap {
     float: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__info-wrap {
+    width: 62%;
+    border-right: 1px solid #65666d;
+    padding: 0 0 0 30px;
   }
 }
 
@@ -144,6 +178,13 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__menu {
+    padding: 0;
+    margin-bottom: 47px;
+  }
+}
+
 .footer__menu-item {
   display: inline-block;
   vertical-align: top;
@@ -153,6 +194,12 @@ body {
 @media screen and (min-width: 768px) {
   .footer__menu-item {
     margin-right: 18px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__menu-item {
+    margin-right: 25px;
   }
 }
 
@@ -175,6 +222,13 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__social.social {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 .footer__social.social svg {
   fill: #9e9fa3;
 }
@@ -184,6 +238,14 @@ body {
     float: right;
     padding: 15px 0 10px;
     text-align: right;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__contacts {
+    float: left;
+    padding: 0 0 0 27px;
+    text-align: left;
   }
 }
 
@@ -415,12 +477,13 @@ body {
 .welcome {
   background: url("../img/design/night_no_bg.jpg") no-repeat center 0;
   background-size: cover;
+  min-height: 100%;
 }
 
 .welcome:after {
   content: "";
   display: block;
-  height: 58px;
+  height: 62px;
 }
 
 .welcome__btn {
@@ -601,7 +664,7 @@ body {
 }
 
 .welcome .copyright {
-  margin: -58px 0 0;
+  margin: -62px 0 0;
 }
 
 /*# sourceMappingURL=maps/styles.css.map */

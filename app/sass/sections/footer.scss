@@ -16,6 +16,14 @@
       padding: 26px 22px 8px;
     }
 
+    @include from_1200() {
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+
   }
 
   &__text {
@@ -29,14 +37,39 @@
       float: left;
       border-bottom: 0;
       border-right: 1px solid #65666d;
+      width: 34%;
+      padding: 0 9% 13px 0;
+      text-align: left;
+      min-height: 90px;
     }
 
   }
 
-  &__info-wrap {
+  &__info {
     @include from_768() {
-      float: left;
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
     }
+
+    @include from_1200() {
+      float: left;
+      width: 66%;
+    }
+
+    &-wrap {
+      @include from_768() {
+        float: left;
+      }
+      @include from_1200() {
+        width: 62%;
+        border-right: 1px solid #65666d;
+        padding: 0 0 0 30px;
+      }
+    }
+
   }
 
   &__menu {
@@ -47,12 +80,21 @@
       text-align: left;
     }
 
+    @include from_1200() {
+      padding: 0;
+      margin-bottom: 47px;
+    }
+
     &-item {
       @include inlineblock();
       font-weight: 500;
       
       @include from_768() {
         margin-right: 18px;
+      }
+
+      @include from_1200() {
+        margin-right: 25px;
       }
       
     }
@@ -75,6 +117,11 @@
       border-bottom: none;
     }
 
+    @include from_1200() {
+      padding: 0;
+      margin: 0;
+    }
+
     & svg {
       fill: #9e9fa3;
     }
@@ -87,6 +134,12 @@
       float: right;
       padding: 15px 0 10px;
       text-align: right;
+    }
+
+    @include from_1200() {
+      float: left;
+      padding: 0 0 0 27px;
+      text-align: left;
     }
 
     &-item {
@@ -103,6 +156,11 @@
   &__copyright.copyright {
     background: #2667d8;
     margin-top: 0;
+
+    @include from_1200() {
+
+    }
+
   }
 
 }

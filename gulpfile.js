@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	sourcemaps = require('gulp-sourcemaps'),
 	jade = require('gulp-jade'),
-	browserSync = require('browser-sync');
+	browserSync = require('browser-sync').create();
 
 
 
@@ -48,7 +48,7 @@ gulp.task('jade', function() {
 			pretty: '\t'
 		}))
 		.pipe(gulp.dest('app'))
-		.pipe(browserSync.reload({stream: true}))
+		.pipe(browserSync.stream())
 });
 
 // sass
@@ -61,15 +61,13 @@ gulp.task('sass', function(){
 		.pipe(autoprefixer(['last 2 versions'], {cascade: true}))
 		.pipe(sourcemaps.write('maps'))
 		.pipe(gulp.dest('app/css'))
-		.pipe(browserSync.reload({stream: true}))
+		.pipe(browserSync.stream({match: '**/*.css'}))
 });
 
 // browser-sync
 gulp.task('browser-sync', function() {
-	browserSync({
-		server: {
-			baseDir: 'app'
-		}
+	browserSync.init({
+		server: "./app"
 	});
 });
 

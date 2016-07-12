@@ -1,38 +1,38 @@
 // BASE
 
-@mixin inlineblock($valign: top){
-	display: inline-block;
-	vertical-align: $valign;
+@mixin inlineblock($valign: top) {
+  display: inline-block;
+  vertical-align: $valign;
 }
 
 %clearfix {
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 
 @function rem($px) {
-	@return $px / 16px + 0rem;
+  @return $px / 16px + 0rem;
 }
 
 // MEDIA
 
 @mixin from_768() {
-	@media screen and (min-width: 768px) {
-		@content;
-	}
+  @media screen and (min-width: 768px) {
+    @content;
+  }
 }
 
 @mixin from_1200() {
-	@media screen and (min-width: 1200px) {
-		@content;
-	}
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }
 
 @mixin from_1800() {
-	@media screen and (min-width: 1800px) {
-		@content;
-	}
+  @media screen and (min-width: 1800px) {
+    @content;
+  }
 }

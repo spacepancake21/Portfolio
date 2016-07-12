@@ -6,5 +6,43 @@ block title
 block content
 
   .wrapper.works
+    header.header
 
-  include ../common/header.jade
+      .header__top
+        ul.social.header__social
+          li.social__item.social__item_vk
+            a.social__link(href="#", title="Vkontakte", target="_blank")
+              span.social__title Vkontakte
+              include ../svg/vk.jade
+
+          li.social__item.social__item_gh
+            a.social__link(href="#", title="Github", target="_blank")
+              span.social__title Github
+              include ../svg/github.jade
+
+          li.social__item.social__item_ig
+            a.social__link(href="#", title="Instagram", target="_blank")
+              span.social__title Instagram
+              include ../svg/in.jade
+
+        button.header__menu
+          .header__menu-line
+          .header__menu-line
+          .header__menu-line
+
+      .header__user.user
+        include ../svg/star1.jade
+
+        .user__img-wrap
+          img.user__img(src="img/design/avatar.jpg", alt="User")
+
+        .user__headline Константин Давыдов
+        .user__title Личный сайт веб разработчика
+
+      .header__bottom.header__bottom_dark
+        button.header__button(type="button")
+          include ../svg/arrow_down.jade
+
+        include ../svg/header-bottom.jade
+
+  include ../common/footer.jade

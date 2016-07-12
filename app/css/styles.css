@@ -4,6 +4,12 @@
 /*
   BASE
 */
+.header__top:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -40,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+  background: #faf8f0;
   font-size: 14px;
   height: 100%;
   color: #ffffff;
@@ -134,7 +141,7 @@ body {
     width: 34%;
     padding: 0 9% 13px 0;
     text-align: left;
-    min-height: 90px;
+    min-height: 99px;
   }
 }
 
@@ -391,10 +398,174 @@ body {
   margin-bottom: 15px;
 }
 
+/*
+  HEADER
+*/
 .header {
   height: 100vh;
-  background: url("../../img/design/night_no_bg.jpg") no-repeat center 0;
+  background: url("../img/design/night_no_bg.jpg") no-repeat center 0;
   background-size: cover;
+  position: relative;
+  min-height: 650px;
+}
+
+.header__top {
+  padding: 10px 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__top {
+    padding: 25px 30px;
+  }
+}
+
+.header__social.social {
+  float: left;
+  margin: 0;
+}
+
+.header__social.social .social__item {
+  margin: 0 25px 0 0;
+  width: 23px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__social.social .social__item {
+    width: 30px;
+  }
+}
+
+.header__social.social svg {
+  fill: #fff;
+}
+
+.header__social.social .social__link:hover svg {
+  fill: #2d47ce;
+}
+
+.header__menu {
+  background: none;
+  border: none;
+  float: right;
+  width: 26px;
+  height: 25px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  transition: all linear 0.25s;
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu {
+    width: 40px;
+    height: 45px;
+  }
+}
+
+.header__menu-line {
+  height: 3px;
+  background: #fff;
+  margin-bottom: 7px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu-line {
+    height: 6px;
+    margin-bottom: 9px;
+  }
+}
+
+.header__user.user {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  padding: 25px 0 0 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (min-width: 1200px) {
+  .header__user.user {
+    width: 500px;
+    padding: 35px 0 0 0;
+  }
+}
+
+.header__user.user .user__headline_blog {
+  font-family: "Sansus Webissimo Regular", sans-serif;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .header__user.user .user__headline_blog {
+    font-size: 49px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__user.user .user__headline_blog {
+    font-size: 63px;
+  }
+}
+
+.header__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__bottom-bg {
+  fill: #faf8f0;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.header__bottom-bg_left {
+  width: 50%;
+  left: 0;
+}
+
+.header__bottom-bg_right {
+  width: 50%;
+  right: 0;
+}
+
+.header__bottom_dark .header__bottom-bg {
+  fill: #0d1120;
+  opacity: 0.85;
+}
+
+.header__bottom_double .header__bottom-bg-left {
+  fill: #f2f0e8;
+}
+
+.header__bottom_double .header__bottom-bg-right {
+  fill: #eae8e2;
+}
+
+.header__button {
+  width: 26px;
+  height: 16px;
+  background: none;
+  cursor: pointer;
+  border: none;
+  display: block;
+  padding: 0;
+  outline: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40px;
+  margin: auto;
+}
+
+.header__button-bg {
+  fill: #f4f5f0;
 }
 
 /*
@@ -409,6 +580,8 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin: 0 10px;
+  width: 26px;
+  transition: width linear 0.25s;
 }
 
 .social__link {
@@ -432,6 +605,10 @@ body {
 /*
 	USER
 */
+.user {
+  transition: width linear 0.25s;
+}
+
 .user__img {
   max-width: 100%;
 }
@@ -442,6 +619,7 @@ body {
   overflow: hidden;
   border-radius: 50%;
   margin: 0 auto 18px;
+  transition: margin linear 0.25s;
 }
 
 @media screen and (min-width: 768px) {
@@ -455,6 +633,7 @@ body {
   font-weight: 500;
   text-align: center;
   margin-bottom: 10px;
+  transition: font-size linear 0.25s;
 }
 
 @media screen and (min-width: 768px) {
@@ -466,12 +645,23 @@ body {
 .user__title {
   text-align: center;
   margin-bottom: 38px;
+  transition: font-size linear 0.25s;
 }
 
 @media screen and (min-width: 768px) {
   .user__title {
     margin-bottom: 30px;
   }
+}
+
+.user svg {
+  fill: #2a496c;
+  stroke: #2a496c;
+  position: absolute;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .welcome {
@@ -581,7 +771,7 @@ body {
   font-size: 30px;
   text-transform: uppercase;
   text-align: center;
-  font-family: "Sansus Webissimo Regular";
+  font-family: "Sansus Webissimo Regular", sans-serif;
 }
 
 .welcome__img {

@@ -3,32 +3,34 @@
 */
 
 .social {
-	text-align: center;
-	margin-bottom: 34px;
+  text-align: center;
+  margin-bottom: 34px;
 
-	&__item {
-		display: inline-block;
-		vertical-align: middle;
-		margin: 0 10px;
-	}
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    width: 26px;
+    transition: width $transition;
+  }
 
-	&__link {
-		display: block;
-		text-decoration: none;
+  &__link {
+    display: block;
+    text-decoration: none;
 
-		& svg {
-			fill: #0a44aa;
-			transition: fill $transition;
-		}
+    & svg {
+      fill: #0a44aa;
+      transition: fill $transition;
+    }
 
-		&:hover svg {
-			fill: #004cd1;
-		}
+    &:hover svg {
+      fill: #004cd1;
+    }
 
-	}
+  }
 
-	&__title {
-		display: none;
-	}
+  &__title {
+    display: none;
+  }
 
 }

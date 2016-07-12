@@ -100,7 +100,7 @@ body {
 	FOOTER
 */
 .footer {
-  background: #3e4049;
+  background: #1c1f29;
   text-align: center;
   position: relative;
   min-width: 320px;
@@ -511,17 +511,14 @@ body {
 }
 
 .header__bottom {
+  width: 100%;
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
 }
 
 .header__bottom-bg {
   fill: #faf8f0;
   display: block;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
 
@@ -560,7 +557,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top: 40px;
+  bottom: 15%;
   margin: auto;
 }
 

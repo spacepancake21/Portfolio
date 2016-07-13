@@ -6,6 +6,21 @@ block title
 block content
 
   .wrapper.works
+
+    nav.menu
+      ul.menu__inner
+        li.menu__item.menu__item_active
+          a.menu__link(href="works.html", title="Мои работы") Мои работы
+
+        li.menu__item
+          a.menu__link(href="blog.html", title="Блог") Блог
+
+        li.menu__item
+          a.menu__link(href="about.html", title="Обо мне") Обо мне
+
+        li.menu__item
+          a.menu__link(href="index.html", title="Авторизация") Авторизация
+
     header.header
 
       .header__top
@@ -25,7 +40,7 @@ block content
               span.social__title Instagram
               include ../svg/in.jade
 
-        button.header__menu
+        button.header__menu.js-menu-toggle
           .header__menu-line
           .header__menu-line
           .header__menu-line

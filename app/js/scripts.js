@@ -30,4 +30,17 @@ $(function() {
 
 	})();
 
+	// Активация меню
+
+	(function() {
+
+		// Переворачивание плашек на главной странице
+
+		$('.js-menu-toggle').on('click', function() {
+			$(this).toggleClass('header__menu_active');
+			$('.menu').toggleClass('menu_active');
+		});
+
+	})();
+
 });

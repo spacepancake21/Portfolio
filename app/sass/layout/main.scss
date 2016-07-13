@@ -42,7 +42,6 @@ body {
   color: #ffffff;
   font-family: $roboto;
   font-weight: normal;
-  min-height: 650px;
 
   @include from_1200 {
     font-size: 16px;

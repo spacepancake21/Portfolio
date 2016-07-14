@@ -5,9 +5,10 @@
 .header {
   height: 100vh;
   min-height: 460px;
-  background: url("../img/design/night_no_bg.jpg") no-repeat center 0;
+  background: #f9f8f0 url("../img/design/night_no_bg.jpg") no-repeat center 0;
   background-size: cover;
   position: relative;
+  transition: transform $transition;
 
   &__top {
     @extend %clearfix;
@@ -157,7 +158,7 @@
   &__bottom {
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
 
     &-bg {
       fill: #faf8f0;
@@ -221,6 +222,10 @@
       fill: #f4f5f0;
     }
 
+  }
+
+  &_slide-right {
+    transform: translateX(90%);
   }
 
 }

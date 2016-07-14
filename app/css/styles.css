@@ -64,6 +64,215 @@ body {
   width: 100%;
   min-width: 320px;
   position: relative;
+  overflow: hidden;
+}
+
+/*
+	BLOG
+*/
+@media screen and (min-width: 1200px) {
+  .blog:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.blog__sidebar {
+  background: #253468;
+  position: fixed;
+  left: -90%;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 90%;
+  box-shadow: 0 0 5px 0 #dddddd;
+  z-index: 1;
+  transition: left linear 0.25s;
+}
+
+@media screen and (min-width: 1200px) {
+  .blog__sidebar {
+    transition: none;
+    position: static;
+    float: left;
+    width: 310px;
+    background: none;
+    box-shadow: none;
+  }
+}
+
+.blog__sidebar-button {
+  content: "";
+  display: block;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-left: 2px solid #253468;
+  background: none;
+  padding: 0;
+  width: 22px;
+  height: 65px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  right: -20px;
+  margin-top: -25px;
+  outline: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .blog__sidebar-button {
+    display: none;
+  }
+}
+
+.blog__sidebar-button:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #253468;
+  box-shadow: inset 0 0 5px 0 #dddddd;
+  margin-left: -45px;
+}
+
+.blog__sidebar_active {
+  left: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .blog__sidebar_fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+}
+
+.blog__menu {
+  margin: 0;
+  padding: 20px;
+  float: right;
+}
+
+@media screen and (min-width: 1200px) {
+  .blog__menu {
+    padding: 20px 0;
+  }
+}
+
+.blog__menu-item {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.7;
+  text-align: right;
+  margin-bottom: 40px;
+  transition: opacity linear 0.25s;
+}
+
+@media screen and (min-width: 1200px) {
+  .blog__menu-item {
+    color: #566358;
+    margin-bottom: 25px;
+  }
+}
+
+.blog__menu-item:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1200px) {
+  .blog__menu-item:hover {
+    color: #083c96;
+    font-weight: 700;
+  }
+}
+
+.blog__menu-item:hover .blog__menu-link {
+  border-color: #083c96;
+}
+
+.blog__menu-item_active {
+  opacity: 1;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+  .blog__menu-item_active {
+    color: #083c96;
+  }
+}
+
+.blog__menu-item_active .blog__menu-link {
+  border-color: #083c96;
+}
+
+.blog__menu-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .blog__menu-link {
+    display: block;
+    padding: 11px 20px 11px 0;
+    border-right: 3px solid transparent;
+    transition: border-color linear 0.25s;
+  }
+}
+
+.blog__content {
+  color: #474b57;
+  min-height: 600px;
+  padding: 20px;
+  transition: transform linear 0.25s;
+}
+
+@media screen and (min-width: 1200px) {
+  .blog__content {
+    margin-left: 410px;
+    padding: 20px 110px 20px 20px;
+  }
+}
+
+.blog__content_slide-right {
+  transform: translateX(90%);
+}
+
+.blog__article {
+  border-bottom: 5px solid #ebebe4;
+  margin-bottom: 50px;
+  padding: 0 0 40px 0;
+}
+
+.blog__article:last-child {
+  margin-bottom: 0;
+  border: none;
+}
+
+.blog__headline {
+  font-family: "Sansus Webissimo Regular", sans-serif;
+  font-size: 30px;
+  color: #474b57;
+  margin-bottom: 20px;
+  transition: font-size linear 0.25s;
+}
+
+@media screen and (min-width: 768px) {
+  .blog__headline {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .blog__headline {
+    font-size: 35px;
+  }
+}
+
+.blog__date {
+  color: #083c96;
+  margin-bottom: 20px;
 }
 
 /*
@@ -403,9 +612,10 @@ body {
 .header {
   height: 100vh;
   min-height: 460px;
-  background: url("../img/design/night_no_bg.jpg") no-repeat center 0;
+  background: #f9f8f0 url("../img/design/night_no_bg.jpg") no-repeat center 0;
   background-size: cover;
   position: relative;
+  transition: transform linear 0.25s;
 }
 
 .header__top {
@@ -556,7 +766,7 @@ body {
 .header__bottom {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
 }
 
 .header__bottom-bg {
@@ -607,6 +817,10 @@ body {
 
 .header__button-bg {
   fill: #f4f5f0;
+}
+
+.header_slide-right {
+  transform: translateX(90%);
 }
 
 /*

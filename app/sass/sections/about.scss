@@ -1,0 +1,169 @@
+/*
+  ABOUT
+*/
+
+.about {
+  background: #f2f0e8;
+
+  &__img {
+    max-width: 100%;
+    @include inlineblock();
+    &-wrap {
+      margin-bottom: 25px;
+      text-align: center;
+    }
+  }
+
+  &__row {
+    @include from_1200 {
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+    }
+  }
+
+  &__col {
+    padding: 25px 0 12px;
+    &-inner {
+      max-width: 615px;
+      margin: 0 auto;
+      @include from_1200 {
+        max-width: 450px;
+        &:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+    }
+    &_left {
+      background: #f2f0e8;
+      @include from_1200 {
+        width: 50%;
+        float: left;
+      }
+      @include from_1800 {
+        & .about__col-inner {
+          max-width: none;
+        }
+      }
+    }
+    &_right {
+      background: #f4f5f0;
+      @include from_1200 {
+        width: 50%;
+        float: left;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        & .about__col-inner {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+
+  &__text {
+    line-height: 1.7;
+    color: #474b57;
+    padding: 0 10px;
+    transition: all $transition;
+  }
+
+  &__user {
+    @include from_1800 {
+      float: right;
+      width: 52%;
+      padding-right: 20px;
+      transition: all $transition;
+    }
+  }
+
+  &__contacts {
+    background: #fff;
+    padding: 25px 0 0;
+    @include from_768 {
+      padding: 0;
+      position: relative;
+      width: 100%;
+    }
+    &-list {
+      @include from_768 {
+        padding: 40px 20px;
+        background: rgba(#fff, 0.8);
+        width: 350px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -75%);
+        z-index: 1;
+        transition: all $transition;
+      }
+      @include from_1200 {
+        width: 580px;
+      }
+    }
+  }
+
+  &__list {
+    padding: 0 10px 20px;
+    &-item {
+      font-size: 16px;
+      color: #474b57;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include from_768 {
+        margin-bottom: 20px;
+      }
+      @include from_1200 {
+        float: left;
+        width: 260px;
+      }
+    }
+    &-link {
+      vertical-align: middle;
+      color: inherit;
+      text-decoration: none;
+    }
+    &-ico {
+      background-color: #004cd1;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      @include inlineblock(middle);
+      margin-right: 10px;
+      position: relative;
+    }
+    & svg {
+      width: 50%;
+      fill: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  &__map {
+    height: 850px;
+    width: 100%;
+    @include from_768 {
+      height: 900px;
+    }
+    @include from_1200 {
+      height: 975px;
+    }
+    @include from_1800 {
+      height: 1100px;
+    }
+  }
+
+}

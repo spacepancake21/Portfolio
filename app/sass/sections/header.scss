@@ -5,7 +5,7 @@
 .header {
   height: 100vh;
   min-height: 460px;
-  background: #f9f8f0 url("../img/design/night_no_bg.jpg") no-repeat center 0;
+  background: #f9f8f0 url("../img/design/night_no_bg.jpg") no-repeat center;
   background-size: cover;
   position: relative;
   transition: transform $transition;
@@ -188,13 +188,12 @@
 
     &_double {
       .header__bottom-bg {
-
-        &-left {
-          fill: #f2f0e8;
-        }
+        fill: #f2f0e8;
 
         &-right {
-          fill: #eae8e2;
+          @include from_1200 {
+            fill: #f4f5f0;
+          }
         }
 
       }

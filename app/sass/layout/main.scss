@@ -55,3 +55,119 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+.headline {
+  font-size: 35px;
+  font-family: $sansus-regular;
+  transition: font-size $transition;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 34px;
+  @include from_768 {
+    font-size: 49px;
+    position: relative;
+  }
+  @include from_1200 {
+    font-size: 63px;
+  }
+  &__inner {
+    @include from_768 {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  &_dark {
+    color: #373e42;
+    @include from_768 {
+      padding: 45px 0;
+      margin-bottom: 10px;
+    }
+    @include from_1200 {
+      margin-bottom: 20px;
+    }
+    @include from_1800 {
+      float: left;
+      width: 48%;
+    }
+    & .headline__bg {
+      display: none;
+      @include from_768 {
+        display: block;
+        fill: #dfe0e5;
+        stroke: #dfe0e5;
+        transform: rotate(180deg);
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  &-small {
+    color: #474b57;
+    font-size: 21px;
+    font-family: $sansus-regular;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto 15px;
+    max-width: 180px;
+    transition: all $transition;
+    @include from_768 {
+      font-size: 30px;
+      max-width: 250px;
+    }
+    @include from_1200 {
+      font-size: 35px;
+      min-width: 300px;
+    }
+    &:after {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      height: 3px;
+      width: 56px;
+      background: #474b57;
+      transition: width background $transition;
+      margin-top: 15px;
+      @include from_768 {
+        background: #393e42;
+        font-size: 90px;
+      }
+      @include from_1200 {
+        background: #566358;
+      }
+    }
+    &_bordered {
+
+    }
+  }
+
+  &__mini {
+    color: #474b57;
+    font-weight: 500;
+    transition: font-size $transition;
+    text-align: center;
+    @include from_768 {
+      font-size: 20px;
+    }
+    @include from_1200 {
+      font-size: 28px;
+    }
+  }
+  &_large {
+    font-size: 35px;
+    @include from_768 {
+      font-size: 49px;
+      position: relative;
+    }
+    @include from_1200 {
+      font-size: 63px;
+    }
+  }
+
+}

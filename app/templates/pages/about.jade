@@ -55,9 +55,66 @@ block content
         .user__title Личный сайт веб разработчика
 
       button.header__button(type="button")
-        include ../svg/arrow_down.jade
+        include ../svg/arrow-down.jade
 
       .header__bottom.header__bottom_double
         include ../svg/header-bottom.jade
+
+    .about
+      .about__row
+        .about__col.about__col_left
+          .about__col-inner
+            .headline.headline_dark
+              .headline__inner Обо мне
+              include ../svg/headline-bg
+
+            .about__user
+              .about__img-wrap
+                img.about__img(src="img/design/photo.jpg", alt="Photo")
+              .headline-small Кто Я
+              .about__text
+                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+        .about__col.about__col_right
+          .about__col-inner
+            .headline-small Чем я могу быть вам полезен
+            .about__text
+              p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            .headline__mini Frontend
+              //
+            .headline__mini Backend
+              //
+            .headline__mini WorkFlow
+              //
+
+      .about__contacts
+
+        .about__contacts-list
+          .headline-small.headline-small_large Контакты
+
+          .about__list
+            li.about__list-item
+              .about__list-ico
+                include ../svg/skype.jade
+              a.about__list-link(href="", title="") skype_kdn
+
+            li.about__list-item
+              .about__list-ico
+                include ../svg/mail.jade
+              a.about__list-link(href="", title="") astahov@gmail.com
+
+            li.about__list-item
+              .about__list-ico
+                include ../svg/phone.jade
+              a.about__list-link(href="", title="") +7 931 200 93 24
+
+            li.about__list-item
+              .about__list-ico
+                include ../svg/marker.jade
+              a.about__list-link(href="", title="") Новосибирск, ул. Инская, д.14
+
+        .about__map#map
+
 
   include ../common/footer.jade

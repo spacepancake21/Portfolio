@@ -8,6 +8,7 @@
   position: relative;
   min-width: 320px;
   width: 100%;
+  margin-top: -196px;
 
   &__inner {
     padding: 17px 10px 8px;
@@ -156,11 +157,6 @@
   &__copyright.copyright {
     background: #2667d8;
     margin-top: 0;
-
-    @include from_1200() {
-
-    }
-
   }
 
 }

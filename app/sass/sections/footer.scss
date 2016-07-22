@@ -7,20 +7,13 @@
   position: relative;
   min-width: 320px;
   width: 100%;
-  //margin-top: -360px;
-  @include from_768 {
-    //margin-top: -240px;
-  }
-  @include from_1200 {
-    //margin-top: -190px;
-  }
+
   &__inner {
     padding: 17px 10px 8px;
     background: rgba(#1c1f29, 0.85);
     @include from_768() {
       padding: 26px 22px 8px;
     }
-
     @include from_1200() {
       &:after {
         content: "";
@@ -28,7 +21,6 @@
         clear: both;
       }
     }
-
   }
 
   &__text {
@@ -37,7 +29,6 @@
     line-height: 1.6;
     border-bottom: 1px solid #65666d;
     padding: 0 0 13px 0;
-
     @include from_1200() {
       float: left;
       border-bottom: 0;
@@ -47,7 +38,6 @@
       text-align: left;
       min-height: 99px;
     }
-
   }
 
   &__info {
@@ -58,12 +48,10 @@
         clear: both;
       }
     }
-
     @include from_1200() {
       float: left;
       width: 66%;
     }
-
     &-wrap {
       @include from_768() {
         float: left;
@@ -74,88 +62,70 @@
         padding: 0 0 0 30px;
       }
     }
-
   }
 
   &__menu {
     padding: 17px 0 0 0;
     margin: 0 0 16px 0;
-
     @include from_768() {
       text-align: left;
     }
-
     @include from_1200() {
       padding: 0;
       margin-bottom: 47px;
     }
-
     &-item {
       @include inlineblock();
       font-weight: 500;
-      
       @include from_768() {
         margin-right: 18px;
       }
-
       @include from_1200() {
         margin-right: 25px;
       }
-      
     }
-
     &-link {
       color: #fff;
       text-decoration: none;
       padding: 5px 4px;
     }
-
   }
 
   &__social.social {
     margin-bottom: 17px;
     border-bottom: 1px solid #65666d;
     padding-bottom: 13px;
-
     @include from_768() {
       text-align: left;
       border-bottom: none;
     }
-
     @include from_1200() {
       padding: 0;
       margin: 0;
     }
-
     & svg {
       fill: #9e9fa3;
     }
-
   }
 
   &__contacts {
-
     @include from_768() {
       float: right;
       padding: 15px 0 10px;
       text-align: right;
     }
-
     @include from_1200() {
       float: left;
       padding: 0 0 0 27px;
       text-align: left;
     }
-
     &-item {
       margin-bottom: 7px;
     }
-
     &-link {
       color: #fff;
       text-decoration: none;
     }
-
   }
 
   &__copyright.copyright {

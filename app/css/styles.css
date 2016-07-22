@@ -65,6 +65,7 @@ body {
   min-width: 320px;
   position: relative;
   overflow: hidden;
+  margin-bottom: -200px;
 }
 
 .headline {
@@ -507,6 +508,10 @@ body {
 /*
 	BLOG
 */
+.blog {
+  padding-bottom: 250px;
+}
+
 @media screen and (min-width: 1200px) {
   .blog:after {
     content: '';
@@ -1564,6 +1569,7 @@ body {
   background: url("../img/design/night_no_bg.jpg") no-repeat center 0;
   background-size: cover;
   min-height: 100%;
+  margin-bottom: 0;
 }
 
 .welcome:after {
@@ -1975,7 +1981,7 @@ body {
 
 .works__about {
   background: url("../img/design/works_bg.jpg") no-repeat center bottom/cover;
-  padding: 30px 0 60px 0;
+  padding: 30px 0 250px 0;
 }
 
 @media screen and (min-width: 768px) {

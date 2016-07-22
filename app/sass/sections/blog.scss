@@ -3,6 +3,7 @@
 */
 
 .blog {
+  padding-bottom: 250px;
   @include from_1200 {
     &:after {
       content: '';

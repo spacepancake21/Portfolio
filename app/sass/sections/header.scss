@@ -5,7 +5,7 @@
 .header {
   height: 100vh;
   min-height: 460px;
-  background: #f9f8f0 url("../img/design/night_no_bg.jpg") no-repeat center;
+  background: #f9f8f0 url("../img/design/night_no_bg.jpg") no-repeat center bottom;
   background-size: cover;
   position: relative;
   transition: transform $transition;
@@ -41,6 +41,18 @@
       fill: #2d47ce;
     }
 
+  }
+
+  &_dark {
+    min-height: 600px;
+
+    .header__user.user {
+      transform: translateX(-50%) translateY(-80%);
+    }
+
+    .header__button {
+      bottom: 30%;
+    }
   }
 
   &__menu {
@@ -158,7 +170,13 @@
   &__bottom {
     width: 100%;
     position: absolute;
-    bottom: -1px;
+    bottom: 0;
+    @include from_768 {
+      //bottom: -5px;
+    }
+    @include from_1200 {
+      //bottom: -10px;
+    }
 
     &-bg {
       fill: #faf8f0;

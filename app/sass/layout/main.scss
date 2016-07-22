@@ -64,6 +64,7 @@ body {
   text-align: center;
   padding: 0;
   margin-bottom: 34px;
+  position: relative;
   @include from_768 {
     font-size: 49px;
     position: relative;
@@ -71,13 +72,25 @@ body {
   @include from_1200 {
     font-size: 63px;
   }
+
   &__inner {
     @include from_768 {
       position: relative;
       z-index: 1;
     }
   }
-  &_dark {
+
+  &__bg {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    height: 100%;
+  }
+
+  &_light {
     color: #373e42;
     @include from_768 {
       padding: 45px 0;
@@ -97,14 +110,40 @@ body {
         fill: #dfe0e5;
         stroke: #dfe0e5;
         transform: rotate(180deg);
-        position: absolute;
         height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
       }
+    }
+  }
+
+  &_dark {
+    padding: 45px 0;
+    color: #fff;
+    margin-bottom: 0;
+    background: rgba(#0d1120, 0.85);
+    & .headline__bg {
+      fill: #ffffff;
+      stroke: #dfe0e5;
+      transform: rotate(180deg);
+      opacity: 0.20;
+      height: 85%;
+    }
+  }
+
+  &_simple {
+    color: #fff;
+    margin: 0 auto 40px;
+    max-width: 300px;
+    @include from_768 {
+      max-width: 400px;
+      padding: 50px 0;
+    }
+    @include from_1200 {
+      padding: 60px 0;
+    }
+    & .headline__bg {
+      fill: #ffffff;
+      stroke: #dfe0e5;
+      opacity: 0.20;
     }
   }
 
@@ -142,8 +181,14 @@ body {
         background: #566358;
       }
     }
-    &_bordered {
-
+    &_large {
+      font-size: 35px;
+      @include from_768 {
+        font-size: 30px;
+      }
+      @include from_1200 {
+        font-size: 35px;
+      }
     }
   }
 
@@ -159,6 +204,7 @@ body {
       font-size: 28px;
     }
   }
+
   &_large {
     font-size: 35px;
     @include from_768 {
@@ -170,4 +216,11 @@ body {
     }
   }
 
+}
+
+.button-scrolltop {
+  width: 30px;
+  margin: 0 auto;
+  display: block;
+  transform: rotate(180deg);
 }

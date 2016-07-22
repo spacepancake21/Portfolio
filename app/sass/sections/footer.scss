@@ -1,18 +1,22 @@
 /*
-	FOOTER
+  FOOTER
 */
 
 .footer {
-  background: rgba(#1c1f29, 0.85);
   text-align: center;
   position: relative;
   min-width: 320px;
   width: 100%;
-  margin-top: -196px;
-
+  //margin-top: -360px;
+  @include from_768 {
+    //margin-top: -240px;
+  }
+  @include from_1200 {
+    //margin-top: -190px;
+  }
   &__inner {
     padding: 17px 10px 8px;
-
+    background: rgba(#1c1f29, 0.85);
     @include from_768() {
       padding: 26px 22px 8px;
     }
@@ -155,7 +159,7 @@
   }
 
   &__copyright.copyright {
-    background: #2667d8;
+    background: rgba(#2667d8, 0.85);
     margin-top: 0;
   }
 

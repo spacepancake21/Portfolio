@@ -21,7 +21,7 @@ block content
         li.menu__item
           a.menu__link(href="index.html", title="Авторизация") Авторизация
 
-    header.header
+    header.header.header_dark
 
       .header__top
         ul.social.header__social
@@ -59,3 +59,78 @@ block content
 
       .header__bottom.header__bottom_dark
         include ../svg/header-bottom.jade
+        .headline.headline_dark
+          .headline__inner Мои работы
+          include ../svg/headline-bg
+
+    .works
+      .works__inner
+        .works__preview
+          .works__preview-inner
+            img.works__preview-img(src="img/design/works_1.png")
+
+        .works__info
+          .works__info-inner
+            .headline-small.works__info-headline Сайт школы онлайн Образования
+
+            .works__tags html, css, javascript
+
+            a.works__site-link(href="#")
+              .works__site-link-ico
+                include ../svg/works-link.jade
+              .works__site-link-text Посмотреть сайт
+
+        .works__btns
+          .works__btn.works__btn_down
+            img.works__btn-img(src="img/design/works_1.png")
+            a.works__btn-link(href="#")
+              .works__btn-ico
+                include ../svg/works-arrow-down.jade
+
+          .works__btn.works__btn_up
+            img.works__btn-img(src="img/design/works_1.png")
+            a.works__btn-link(href="#")
+              .works__btn-ico
+                include ../svg/works-arrow-up.jade
+
+      .works__about
+        .headline.headline_simple
+          .headline__inner Что обо мне говорят
+          include ../svg/headline-bg-simple.jade
+
+        .works__quotes
+          .works__quote
+            .works__quote-img-wrap
+              img.works__quote-img(src="img/design/quote_1.jpg")
+            blackquote.works__blockquote
+              .works__quote-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              include ../svg/quote.jade
+            .works__quote-name Ковальчук Дмитрий
+            .works__quote-title — основатель Loftschool
+
+          .works__quote
+            .works__quote-img-wrap
+              img.works__quote-img(src="img/design/quote_2.jpg")
+            blackquote.works__blockquote
+              .works__quote-text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+              include ../svg/quote.jade
+            .works__quote-name Зар Захаров
+            .works__quote-title — главный преподаватель
+
+        .works__form
+          form.form.form_works(action="")
+            .headline-small.works__headline-small Связаться со мной
+            .form__row
+              input.form__input(type="text" placeholder="Имя")
+            .form__row
+              input.form__input(type="text" placeholder="Email")
+            .form__row
+              textarea.form__textarea(placeholder="Ваше сообщение")
+            .form__row.form__row_buttons
+              input.form__submit(type="submit" value="Отправить")
+              input.form__reset(type="reset" value="Очистить")
+
+        a.button-scrolltop(href="#")
+          include ../svg/arrow-down.jade
+
+  include ../common/footer.jade

@@ -51,32 +51,33 @@ block content
         .welcome__login
           .welcome__login-title Авторизуйтесь
 
-          form.form
-            .form__row
-              .form__input-ico
-                .form__input-ico-img
-                  include ../svg/login.jade
-              input.form__input(type="text", placeholder="Логин")
+          .welcome__form
+            form.form
+              .form__row
+                .form__input-ico
+                  .form__input-ico-img
+                    include ../svg/login.jade
+                input.form__input(type="text", placeholder="Логин")
 
-            .form__row
-              .form__input-ico
-                .form__input-ico-img
-                  include ../svg/password.jade
-              input.form__input(type="text", placeholder="Пароль")
+              .form__row
+                .form__input-ico
+                  .form__input-ico-img
+                    include ../svg/password.jade
+                input.form__input(type="text", placeholder="Пароль")
 
-            .form__checkbox-wrap
-              input.form__checkbox#i-am-human(type="checkbox")
-              label.form__label.form__label_check(for="i-am-human")
-                div.form__label-text Я человек
+              .form__checkbox-wrap
+                input.form__checkbox#i-am-human(type="checkbox")
+                label.form__label.form__label_check(for="i-am-human")
+                  div.form__label-text Я человек
 
-            .form__sure-text Вы точно не робот?
+              .form__sure-text Вы точно не робот?
 
-            .form__radio-btn-wrap
-              input.form__radio-btn#human-yes(type="radio", name="human-choose")
-              label.form__label-radio(for="human-yes") Да
+              .form__radio-btn-wrap
+                input.form__radio-btn#human-yes(type="radio", name="human-choose")
+                label.form__label-radio(for="human-yes") Да
 
-              input.form__radio-btn#human-no(type="radio", name="human-choose")
-              label.form__label-radio(for="human-no") Не уверен
+                input.form__radio-btn#human-no(type="radio", name="human-choose")
+                label.form__label-radio(for="human-no") Не уверен
 
           .welcome__menu
             ul.welcome__menu-inner

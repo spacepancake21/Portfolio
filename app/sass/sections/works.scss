@@ -18,8 +18,18 @@
       width: 240px;
       margin: 0 auto;
       transition: width $transition;
+      padding: 0;
       @include from_768 {
         width: 560px;
+      }
+    }
+    &-item {
+      display: none;
+      opacity: 0;
+      transition: opacity $transition;
+      &_active {
+        display: block;
+        opacity: 1;
       }
     }
     &-img {
@@ -54,11 +64,22 @@
       left: 0;
     }
     &-inner {
+      margin: 0;
+      padding: 0;
       @include from_1200 {
         width: 100%;
         position: absolute;
         top: 50%;
         transform: translate3d(0, -50%, 0);
+      }
+    }
+    &-item {
+      display: none;
+      opacity: 0;
+      transition: opacity $transition;
+      &_active {
+        display: block;
+        opacity: 1;
       }
     }
   }
@@ -104,20 +125,38 @@
 
   &__btns {
     clear: both;
+    height: 150px;
     @include clearfix;
+    @include from_768 {
+      height: 280px;
+    }
     @include from_1200 {
       width: 50%;
+      height: 240px;
       float: right;
+    }
+    @include from_1800 {
+      height: 330px;
     }
   }
 
   &__btn {
     float: left;
     width: 50%;
-    padding: 10px 20px;
+    padding: 0;
     position: relative;
+    height: 100%;
+    overflow: hidden;
     &-img {
-      max-width: 100%;
+      height: 100%;
+      width: auto;
+      padding: 30px 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
     }
     &_down {
       background: #bdbec6;
@@ -137,6 +176,7 @@
       left: 0;
       height: 100%;
       width: 100%;
+      z-index: 3;
       svg {
         transition: filter $transition;
         filter: drop-shadow(0px 5px 5px #000);
@@ -156,11 +196,68 @@
       bottom: 0;
       left: 0;
     }
+    &-item {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      transition: all $transition;
+      background: #fff;
+      z-index: 1;
+      &_active {
+        z-index: 2;
+        top: 0;
+      }
+      &_anim {
+        animation: slideDownUp $transition;
+      }
+    }
+
+    &_up {
+      & .works__btn-item {
+        top: 100%;
+      }
+      & .works__btn-item_active {
+        top: 0;
+      }
+      & .works__btn-item_anim {
+        animation: slideUpDown $transition;
+      }
+    }
+
+  }
+
+  @keyframes slideDownUp {
+
+    0% {
+      top: 0;
+    }
+
+    100% {
+      top: 100%;
+    }
+
+  }
+
+  @keyframes slideUpDown {
+
+    0% {
+      top: 0;
+    }
+
+    100% {
+      top: -100%;
+    }
+
   }
 
   &__about {
     background: url("../img/design/works_bg.jpg") no-repeat center bottom/cover;
-    padding: 30px 0 250px 0;
+    padding: 30px 0 400px 0;
+    @include from_768 {
+      padding: 30px 0 300px 0;
+    }
   }
 
   &__quotes {

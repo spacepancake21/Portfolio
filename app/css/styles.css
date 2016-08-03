@@ -65,7 +65,19 @@ body {
   min-width: 320px;
   position: relative;
   overflow: hidden;
-  margin-bottom: -200px;
+  margin-bottom: -360px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    margin-bottom: -250px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    margin-bottom: -200px;
+  }
 }
 
 .headline {
@@ -1788,12 +1800,24 @@ body {
   width: 240px;
   margin: 0 auto;
   transition: width linear 0.25s;
+  padding: 0;
 }
 
 @media screen and (min-width: 768px) {
   .works__preview-inner {
     width: 560px;
   }
+}
+
+.works__preview-item {
+  display: none;
+  opacity: 0;
+  transition: opacity linear 0.25s;
+}
+
+.works__preview-item_active {
+  display: block;
+  opacity: 1;
 }
 
 .works__preview-img {
@@ -1838,6 +1862,11 @@ body {
   }
 }
 
+.works__info-inner {
+  margin: 0;
+  padding: 0;
+}
+
 @media screen and (min-width: 1200px) {
   .works__info-inner {
     width: 100%;
@@ -1845,6 +1874,17 @@ body {
     top: 50%;
     transform: translate3d(0, -50%, 0);
   }
+}
+
+.works__info-item {
+  display: none;
+  opacity: 0;
+  transition: opacity linear 0.25s;
+}
+
+.works__info-item_active {
+  display: block;
+  opacity: 1;
 }
 
 .works__tags {
@@ -1901,6 +1941,7 @@ body {
 
 .works__btns {
   clear: both;
+  height: 150px;
 }
 
 .works__btns:before, .works__btns:after {
@@ -1912,22 +1953,45 @@ body {
   clear: both;
 }
 
+@media screen and (min-width: 768px) {
+  .works__btns {
+    height: 280px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .works__btns {
     width: 50%;
+    height: 240px;
     float: right;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .works__btns {
+    height: 330px;
   }
 }
 
 .works__btn {
   float: left;
   width: 50%;
-  padding: 10px 20px;
+  padding: 0;
   position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
 .works__btn-img {
-  max-width: 100%;
+  height: 100%;
+  width: auto;
+  padding: 30px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .works__btn_down {
@@ -1952,6 +2016,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
+  z-index: 3;
 }
 
 .works__btn-link svg {
@@ -1979,9 +2044,65 @@ body {
   left: 0;
 }
 
+.works__btn-item {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  transition: all linear 0.25s;
+  background: #fff;
+  z-index: 1;
+}
+
+.works__btn-item_active {
+  z-index: 2;
+  top: 0;
+}
+
+.works__btn-item_anim {
+  animation: slideDownUp linear 0.25s;
+}
+
+.works__btn_up .works__btn-item {
+  top: 100%;
+}
+
+.works__btn_up .works__btn-item_active {
+  top: 0;
+}
+
+.works__btn_up .works__btn-item_anim {
+  animation: slideUpDown linear 0.25s;
+}
+
+@keyframes slideDownUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes slideUpDown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
 .works__about {
   background: url("../img/design/works_bg.jpg") no-repeat center bottom/cover;
-  padding: 30px 0 250px 0;
+  padding: 30px 0 400px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .works__about {
+    padding: 30px 0 300px 0;
+  }
 }
 
 @media screen and (min-width: 768px) {

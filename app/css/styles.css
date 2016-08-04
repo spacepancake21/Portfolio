@@ -1060,6 +1060,11 @@ body {
   margin-bottom: 15px;
 }
 
+.form_works {
+  position: relative;
+  z-index: 1;
+}
+
 .form_works .form__input {
   color: #fff;
   height: 40px;
@@ -2095,7 +2100,9 @@ body {
 }
 
 .works__about {
-  background: url("../img/design/works_bg.jpg") no-repeat center bottom/cover;
+  background-image: url("../img/design/works_bg.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
   padding: 30px 0 400px 0;
 }
 
@@ -2199,14 +2206,15 @@ body {
 
 .works__form {
   width: 300px;
+  height: 470px;
   margin: 0 auto 50px;
   padding: 40px 20px 20px;
-  background: rgba(255, 255, 255, 0.05);
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
   .works__form {
-    width: 350px;
+    width: 600px;
   }
 }
 
@@ -2214,6 +2222,19 @@ body {
   .works__form {
     width: 400px;
   }
+}
+
+.works__blur {
+  position: absolute;
+  background-image: url("../img/design/works_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=maps/styles.css.map */

@@ -1,5 +1,7 @@
 $(function() {
 
+	// SLIDER
+
 	var
 		worksInfoItem = $('.works__info-item'),
 		worksPreviewItem = $('.works__preview-item'),
@@ -130,4 +132,28 @@ $(function() {
 
 	});
 
+});
+
+// BLUR
+
+function blur() {
+	var imgWidth = 2067,
+		blurSection = $('.works__about'),
+		blur = $('.works__blur'),
+		posY;
+
+	posY = blurSection.offset().top - blur.offset().top;
+
+	blur.css({
+		'background-size': imgWidth + 'px' + ' ' + 'auto',
+		'background-position': 'center' + ' ' + posY + 'px'
+	});
+}
+
+$(document).ready(function(){
+	blur();
+});
+
+$(window).resize(function(){
+	blur();
 });

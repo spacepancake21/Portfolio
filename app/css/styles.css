@@ -269,6 +269,7 @@ body {
   font-weight: 500;
   transition: font-size linear 0.25s;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -381,9 +382,6 @@ body {
   .about__col_right {
     width: 50%;
     float: left;
-    position: absolute;
-    right: 0;
-    height: 100%;
   }
   .about__col_right .about__col-inner {
     max-width: 90%;
@@ -492,6 +490,52 @@ body {
   bottom: 0;
   right: 0;
   margin: auto;
+}
+
+.about__skills {
+  text-align: center;
+}
+
+.about__skill {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 0 20px 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media screen and (min-width: 1200px) {
+  .about__skill {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+.about__skill svg {
+  width: 100%;
+  height: 100%;
+}
+
+.about__skill svg .bottom {
+  stroke-dashoffset: 0;
+  stroke: #dfdcd5;
+  stroke-width: 20px;
+}
+
+.about__skill svg .cover {
+  stroke: #1056d1;
+  transition: stroke-dashoffset 1.5s;
+  stroke-width: 20px;
+}
+
+.about__skill-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #243994;
 }
 
 .about__map {
@@ -2100,6 +2144,7 @@ body {
 }
 
 .works__about {
+  background-color: #120d14;
   background-image: url("../img/design/works_bg.jpg");
   background-position: center top;
   background-repeat: no-repeat;

@@ -136,24 +136,28 @@ $(function() {
 
 // BLUR
 
-function blur() {
-	var imgWidth = 2067,
-		blurSection = $('.works__about'),
-		blur = $('.works__blur'),
-		posY;
+if($('.works__about').length) {
 
-	posY = blurSection.offset().top - blur.offset().top;
+	function blur() {
+		var imgWidth = 2067,
+			blurSection = $('.works__about'),
+			blur = $('.works__blur'),
+			posY;
 
-	blur.css({
-		'background-size': imgWidth + 'px' + ' ' + 'auto',
-		'background-position': 'center' + ' ' + posY + 'px'
+		posY = blurSection.offset().top - blur.offset().top;
+
+		blur.css({
+			//'background-size': imgWidth + 'px' + ' ' + 'auto',
+			'background-position': 'center' + ' ' + posY + 'px'
+		});
+	}
+
+	$(document).ready(function(){
+		blur();
 	});
+
+	$(window).resize(function(){
+		blur();
+	});
+
 }
-
-$(document).ready(function(){
-	blur();
-});
-
-$(window).resize(function(){
-	blur();
-});

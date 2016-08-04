@@ -8,7 +8,7 @@
   "license": "ISC",
   "homepage": "https://github.com/spacepancake21/Portfolio",
   "dependencies": {
-    "jquery": "^3.0.0",
-    "normalize-css": "normalize.css#^4.1.1"
+    "normalize-css": "normalize.css#^4.1.1",
+    "jquery": "2"
   }
 }

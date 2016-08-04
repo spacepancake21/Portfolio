@@ -61,6 +61,7 @@ body {
 }
 
 .wrapper {
+  visibility: hidden;
   width: 100%;
   min-width: 320px;
   position: relative;
@@ -306,6 +307,61 @@ body {
   margin: 0 auto;
   display: block;
   transform: rotate(180deg);
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #253468;
+  z-index: 999;
+}
+
+.preloader__inner {
+  width: 53px;
+  height: 53px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.preloader__inner svg {
+  width: 100%;
+  fill: #fff;
+  stroke: #fff;
+}
+
+.preloader__percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.preloader__dot {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  animation: preloader 1s ease-in-out infinite;
+}
+
+@keyframes preloader {
+  0% {
+    transform: rotate(-45deg) translateX(36px);
+  }
+  100% {
+    transform: rotate(315deg) translateX(36px);
+  }
 }
 
 /*
@@ -806,6 +862,7 @@ body {
   FOOTER
 */
 .footer {
+  display: none;
   text-align: center;
   position: relative;
   min-width: 320px;
@@ -1135,6 +1192,10 @@ body {
 .form_works .form__input:-ms-input-placeholder {
   color: #fff;
   opacity: 0.5;
+}
+
+.form_works .form__input_error {
+  border: 1px solid #830f0f;
 }
 
 .form_works .form__textarea {

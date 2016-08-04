@@ -123,6 +123,9 @@
         border: none;
         padding: 0 20px;
         @include placeholder(#fff, 0.5);
+        &_error {
+          border: 1px solid #830f0f;
+        }
       }
 
       &__textarea {

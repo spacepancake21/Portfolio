@@ -42,7 +42,6 @@ $(function() {
 			} else {
 				blogSidebar.removeClass('blog__sidebar_fixed');
 			}
-
 		});
 
 	}

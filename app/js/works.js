@@ -132,32 +132,74 @@ $(function() {
 
 	});
 
-});
+	// BLUR
 
-// BLUR
+	if($('.works__about').length) {
 
-if($('.works__about').length) {
+		function blur() {
+			var imgWidth = 2067,
+				blurSection = $('.works__about'),
+				blur = $('.works__blur'),
+				posY;
 
-	function blur() {
-		var imgWidth = 2067,
-			blurSection = $('.works__about'),
-			blur = $('.works__blur'),
-			posY;
+			posY = blurSection.offset().top - blur.offset().top;
 
-		posY = blurSection.offset().top - blur.offset().top;
+			blur.css({
+				//'background-size': imgWidth + 'px' + ' ' + 'auto',
+				'background-position': 'center' + ' ' + posY + 'px'
+			});
+		}
 
-		blur.css({
-			//'background-size': imgWidth + 'px' + ' ' + 'auto',
-			'background-position': 'center' + ' ' + posY + 'px'
+		$(document).ready(function(){
+			blur();
 		});
+
+		$(window).resize(function(){
+			blur();
+		});
+
 	}
 
-	$(document).ready(function(){
-		blur();
+	// Кнопка перемещения вверх
+
+	$('.button-scrolltop').on('click', function(e) {
+
+		e.preventDefault();
+		$('html, body').stop().animate({scrollTop: 0});
+
 	});
 
-	$(window).resize(function(){
-		blur();
+	// Валидация формы
+
+	var formInput = $('.form__input');
+
+	$('.form_works').on('submit', function() {
+
+		var val;
+
+		$(this).find(formInput).each(function() {
+			if($(this).val().trim() !== '') {
+				$(this).removeClass('form__input_error');
+			} else {
+				$(this).addClass('form__input_error');
+				val = false;
+			}
+		});
+
+		if(val === false) {
+			return false;
+		}
+
 	});
 
-}
+	formInput.on('keyup', function() {
+
+		$(this).each(function() {
+			if($(this).val().trim() !== '') {
+				$(this).removeClass('form__input_error');
+			}
+		});
+
+	});
+
+});

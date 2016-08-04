@@ -26,4 +26,12 @@ $(function() {
 			flippedFront();
 		});
 
+	// Кнопка прокрутки вниз в хедере
+
+	$('.header__button').on('click', function() {
+
+		$('html, body').stop().animate({scrollTop: $('.header').height()});
+
+	});
+
 });

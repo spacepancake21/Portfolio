@@ -61,7 +61,7 @@ body {
 }
 
 .wrapper {
-  visibility: hidden;
+  display: none;
   width: 100%;
   min-width: 320px;
   position: relative;

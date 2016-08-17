@@ -137,8 +137,9 @@
       margin-right: 10px;
       position: relative;
     }
-    & svg {
+    &-svg {
       width: 50%;
+      height: 100%;
       fill: #fff;
       position: absolute;
       top: 0;

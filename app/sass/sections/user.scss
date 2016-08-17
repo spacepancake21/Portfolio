@@ -48,7 +48,7 @@
 
   }
 
-  svg {
+  &__svg {
     fill: #2a496c;
     stroke: #2a496c;
     position: absolute;
@@ -56,6 +56,11 @@
     top: 0;
     left: 0;
     z-index: -1;
+    height: 180px;
+    width: 100%;
+    @include from_1200 {
+      height: 100%;
+    }
   }
 
 }

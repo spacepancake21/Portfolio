@@ -20,15 +20,20 @@
           li.social__item.social__item_vk
             a.social__link(href="#", title="Vkontakte" target="_blank")
               span.social__title Vkontakte
-              include ../svg/vk.jade
+              svg.social__icon
+                use(xlink:href='img/sprite.svg#vk')
+
           li.social__item.social__item_gh
             a.social__link(href="#", title="Github" target="_blank")
               span.social__title Github
-              include ../svg/github.jade
+              svg.social__icon
+                use(xlink:href='img/sprite.svg#github')
+
           li.social__item.social__item_ig
-            a.social__link(href="#", title="Instagram" target="_blank")
-              span.social__title Instagram
-              include ../svg/in.jade
+            a.social__link(href="#", title="LinkedIn" target="_blank")
+              span.social__title LinkedIn
+              svg.social__icon
+                use(xlink:href='img/sprite.svg#in')
 
       ul.footer__contacts
         li.footer__contacts-item skype_kdn

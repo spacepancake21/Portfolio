@@ -1,37 +1,37 @@
 "use strict";
 
-$(function() {
+$(function () {
 
-		// Переворачивание плашек на главной странице
+  // Переворачивание плашек на главной странице
 
-		var flippedFront = function() {
-			$('.welcome__btn').fadeIn();
-			$('.welcome__block').removeClass('welcome__block_flipped');
-		};
+  var flippedFront = function () {
+    $('.welcome__btn').fadeIn();
+    $('.welcome__block').removeClass('welcome__block_flipped');
+  };
 
-		$('.welcome__btn').on('click', function(e) {
-			e.preventDefault();
-			$(this).fadeOut();
-			$('.welcome__block').addClass('welcome__block_flipped');
-		});
+  $('.welcome__btn').on('click', function (e) {
+    e.preventDefault();
+    $(this).fadeOut();
+    $('.welcome__block').addClass('welcome__block_flipped');
+  });
 
-		$('.wrapper').on('click', function(e) {
-			if(e.target.classList.contains('welcome')) {
-				flippedFront();
-			}
-		});
+  $('.wrapper').on('click', function (e) {
+    if (e.target.classList.contains('welcome')) {
+      flippedFront();
+    }
+  });
 
-		$('.js-flipped-front').on('click', function(e) {
-			e.preventDefault();
-			flippedFront();
-		});
+  $('.js-flipped-front').on('click', function (e) {
+    e.preventDefault();
+    flippedFront();
+  });
 
-	// Кнопка прокрутки вниз в хедере
+  // Кнопка прокрутки вниз в хедере
 
-	$('.header__button').on('click', function() {
+  $('.header__button').on('click', function () {
 
-		$('html, body').stop().animate({scrollTop: $('.header').height()});
+    $('html, body').stop().animate({scrollTop: $('.header').height()});
 
-	});
+  });
 
 });

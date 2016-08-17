@@ -5,13 +5,7 @@ block title
 
 block content
 
-  .preloader
-    .preloader__load-bar
-    .preloader__inner
-      svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 53 53', enable-background='new 0 0 52.586 63.73', xml:space='preserve')
-        circle.circle(fill='none', stroke-width='3', stroke-miterlimit='10', cx='26.293', cy='26.438', r='25')
-      .preloader__percent 0
-      .preloader__dot
+  include ../common/preloader.jade
 
   .wrapper
 
@@ -34,19 +28,22 @@ block content
       .header__top
         ul.social.header__social
           li.social__item.social__item_vk
-            a.social__link(href="#", title="Vkontakte", target="_blank")
+            a.social__link(href="#", title="Vkontakte" target="_blank")
               span.social__title Vkontakte
-              include ../svg/vk.jade
+              svg.social__icon
+                use(xlink:href='img/sprite.svg#vk')
 
           li.social__item.social__item_gh
-            a.social__link(href="#", title="Github", target="_blank")
+            a.social__link(href="#", title="Github" target="_blank")
               span.social__title Github
-              include ../svg/github.jade
+              svg.social__icon
+                use(xlink:href='img/sprite.svg#github')
 
           li.social__item.social__item_ig
-            a.social__link(href="#", title="Instagram", target="_blank")
-              span.social__title Instagram
-              include ../svg/in.jade
+            a.social__link(href="#", title="LinkedIn" target="_blank")
+              span.social__title LinkedIn
+              svg.social__icon
+                use(xlink:href='img/sprite.svg#in')
 
         button.header__menu.js-menu-toggle
           .header__menu-line
@@ -54,7 +51,8 @@ block content
           .header__menu-line
 
       .header__user.user
-        include ../svg/star1.jade
+        svg.user__svg
+          use(xlink:href='img/sprite.svg#figure')
 
         .user__img-wrap
           img.user__img(src="img/design/avatar.jpg", alt="User")
@@ -63,13 +61,16 @@ block content
         .user__title Личный сайт веб разработчика
 
       button.header__button(type="button")
-        include ../svg/arrow-down.jade
+        svg.header__button-bg
+          use(xlink:href='img/sprite.svg#arrow_down')
 
       .header__bottom.header__bottom_dark
-        include ../svg/header-bottom.jade
+        svg.header__bottom-bg
+          use(xlink:href='img/sprite.svg#header_bottom')
         .headline.headline_dark
           .headline__inner Мои работы
-          include ../svg/headline-bg
+          svg.headline__bg
+            use(xlink:href='img/sprite.svg#figure_2')
 
     .works
       .works__inner
@@ -91,7 +92,8 @@ block content
               .works__tags html, css, javascript
               a.works__site-link(href="#", target="_blank")
                 .works__site-link-ico
-                  include ../svg/works-link.jade
+                  svg.works__site-link-svg
+                    use(xlink:href='img/sprite.svg#link_ico')
                 .works__site-link-text Посмотреть сайт
 
             li.works__info-item
@@ -99,7 +101,8 @@ block content
               .works__tags html, css, javascript
               a.works__site-link(href="#", target="_blank")
                 .works__site-link-ico
-                  include ../svg/works-link.jade
+                  svg.works__site-link-svg
+                    use(xlink:href='img/sprite.svg#link_ico')
                 .works__site-link-text Посмотреть сайт
 
             li.works__info-item
@@ -107,7 +110,8 @@ block content
               .works__tags html, css, javascript
               a.works__site-link(href="#", target="_blank")
                 .works__site-link-ico
-                  include ../svg/works-link.jade
+                  svg.works__site-link-svg
+                    use(xlink:href='img/sprite.svg#link_ico')
                 .works__site-link-text Посмотреть сайт
 
             li.works__info-item
@@ -115,7 +119,8 @@ block content
               .works__tags html, css, javascript
               a.works__site-link(href="#", target="_blank")
                 .works__site-link-ico
-                  include ../svg/works-link.jade
+                  svg.works__site-link-svg
+                    use(xlink:href='img/sprite.svg#link_ico')
                 .works__site-link-text Посмотреть сайт
 
         .works__btns
@@ -130,7 +135,8 @@ block content
               img.works__btn-img(src="img/design/works.png")
             a.works__btn-link(href="#")
               .works__btn-ico
-                include ../svg/works-arrow-down.jade
+                svg.works__btn-svg
+                  use(xlink:href='img/sprite.svg#arrow_down')
 
           ul.works__btn.works__btn_up
             li.works__btn-item
@@ -143,12 +149,14 @@ block content
               img.works__btn-img(src="img/design/works.png")
             a.works__btn-link(href="#")
               .works__btn-ico
-                include ../svg/works-arrow-up.jade
+                svg.works__btn-svg
+                  use(xlink:href='img/sprite.svg#arrow_up')
 
       .works__about
         .headline.headline_simple
           .headline__inner Что обо мне говорят
-          include ../svg/headline-bg-simple.jade
+          svg.headline__bg
+            use(xlink:href='img/sprite.svg#figure_3')
 
         .works__quotes
           .works__quote
@@ -156,7 +164,8 @@ block content
               img.works__quote-img(src="img/design/quote_1.jpg")
             blackquote.works__blockquote
               .works__quote-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-              include ../svg/quote.jade
+              svg.works__quote-svg
+                use(xlink:href='img/sprite.svg#quote')
             .works__quote-name Ковальчук Дмитрий
             .works__quote-title — основатель Loftschool
 
@@ -165,7 +174,8 @@ block content
               img.works__quote-img(src="img/design/quote_2.jpg")
             blackquote.works__blockquote
               .works__quote-text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
-              include ../svg/quote.jade
+              svg.works__quote-svg
+                use(xlink:href='img/sprite.svg#quote')
             .works__quote-name Зар Захаров
             .works__quote-title — главный преподаватель
 
@@ -185,6 +195,7 @@ block content
           .works__blur
 
         a.button-scrolltop(href="#")
-          include ../svg/arrow-down.jade
+          svg.header__button-bg
+            use(xlink:href='img/sprite.svg#arrow_up')
 
   include ../common/footer.jade

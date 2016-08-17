@@ -18,15 +18,17 @@
     display: block;
     text-decoration: none;
 
-    & svg {
-      fill: #0a44aa;
-      transition: fill $transition;
-    }
-
-    &:hover svg {
+    &:hover .social__icon {
       fill: #004cd1;
     }
 
+  }
+
+  &__icon {
+    fill: #0a44aa;
+    transition: fill $transition;
+    width: 100%;
+    height: 26px;
   }
 
   &__title {

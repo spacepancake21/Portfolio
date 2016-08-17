@@ -1,9 +1,3 @@
-/*
-  FONTS
-*/
-/*
-  BASE
-*/
 .header__top:after {
   content: "";
   display: block;
@@ -306,7 +300,6 @@ body {
   width: 30px;
   margin: 0 auto;
   display: block;
-  transform: rotate(180deg);
 }
 
 .preloader {
@@ -537,8 +530,9 @@ body {
   position: relative;
 }
 
-.about__list svg {
+.about__list-svg {
   width: 50%;
+  height: 100%;
   fill: #fff;
   position: absolute;
   top: 0;
@@ -1074,6 +1068,7 @@ body {
   bottom: 0;
   left: 0;
   margin: auto;
+  fill: #C4CBCD;
 }
 
 .form__checkbox {
@@ -1477,6 +1472,8 @@ body {
 
 .header__button-bg {
   fill: #f4f5f0;
+  width: 100%;
+  height: 100%;
 }
 
 .header_slide-right {
@@ -1612,13 +1609,15 @@ body {
   text-decoration: none;
 }
 
-.social__link svg {
-  fill: #0a44aa;
-  transition: fill linear 0.25s;
+.social__link:hover .social__icon {
+  fill: #004cd1;
 }
 
-.social__link:hover svg {
-  fill: #004cd1;
+.social__icon {
+  fill: #0a44aa;
+  transition: fill linear 0.25s;
+  width: 100%;
+  height: 26px;
 }
 
 .social__title {
@@ -1677,7 +1676,7 @@ body {
   }
 }
 
-.user svg {
+.user__svg {
   fill: #2a496c;
   stroke: #2a496c;
   position: absolute;
@@ -1685,6 +1684,14 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  height: 180px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .user__svg {
+    height: 100%;
+  }
 }
 
 .welcome {
@@ -1782,7 +1789,8 @@ body {
   width: 100%;
   height: 100%;
   padding: 40px 0 0 0;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   transition: transform linear 0.5s;
 }
 
@@ -1796,6 +1804,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-family: "Sansus Webissimo Regular", sans-serif;
+  margin-bottom: 20px;
 }
 
 .welcome__img {
@@ -2036,8 +2045,10 @@ body {
   vertical-align: top;
 }
 
-.works__site-link-ico svg {
+.works__site-link-svg {
   fill: #fff;
+  height: 100%;
+  width: 100%;
 }
 
 .works__site-link-text {
@@ -2129,16 +2140,18 @@ body {
   z-index: 3;
 }
 
-.works__btn-link svg {
+.works__btn-svg {
   transition: -webkit-filter linear 0.25s;
   transition: filter linear 0.25s;
   transition: filter linear 0.25s, -webkit-filter linear 0.25s;
   -webkit-filter: drop-shadow(0px 5px 5px #000);
           filter: drop-shadow(0px 5px 5px #000);
   fill: #fff;
+  width: 100%;
+  height: 100%;
 }
 
-.works__btn-link:hover svg {
+.works__btn-svg:hover {
   -webkit-filter: drop-shadow(0px 15px 5px #000);
           filter: drop-shadow(0px 15px 5px #000);
 }
@@ -2236,8 +2249,7 @@ body {
 }
 
 .works__quote {
-  padding: 0 20px;
-  padding-bottom: 40px;
+  padding: 0 20px 40px 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -2278,9 +2290,10 @@ body {
   fill-rule: evenodd;
   fill: #272b32;
   width: 80px;
+  height: 70px;
   position: absolute;
-  top: -30px;
-  left: 0;
+  top: -45px;
+  left: -10px;
   opacity: 0.85;
 }
 

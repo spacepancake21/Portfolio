@@ -5,13 +5,7 @@ block title
 
 block content
 
-  .preloader
-    .preloader__load-bar
-    .preloader__inner
-      svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 53 53', enable-background='new 0 0 52.586 63.73', xml:space='preserve')
-        circle.circle(fill='none', stroke-width='3', stroke-miterlimit='10', cx='26.293', cy='26.438', r='25')
-      .preloader__percent 0
-      .preloader__dot
+  include ../common/preloader.jade
 
   .wrapper
 
@@ -34,19 +28,22 @@ block content
       .header__top
         ul.social.header__social
           li.social__item.social__item_vk
-            a.social__link(href="#", title="Vkontakte", target="_blank")
+            a.social__link(href="#", title="Vkontakte" target="_blank")
               span.social__title Vkontakte
-              include ../svg/vk.jade
+              svg.social__icon
+                use(xlink:href='img/sprite.svg#vk')
 
           li.social__item.social__item_gh
-            a.social__link(href="#", title="Github", target="_blank")
+            a.social__link(href="#", title="Github" target="_blank")
               span.social__title Github
-              include ../svg/github.jade
+              svg.social__icon
+                use(xlink:href='img/sprite.svg#github')
 
           li.social__item.social__item_ig
-            a.social__link(href="#", title="Instagram", target="_blank")
-              span.social__title Instagram
-              include ../svg/in.jade
+            a.social__link(href="#", title="LinkedIn" target="_blank")
+              span.social__title LinkedIn
+              svg.social__icon
+                use(xlink:href='img/sprite.svg#in')
 
         button.header__menu.js-menu-toggle
           .header__menu-line
@@ -54,7 +51,8 @@ block content
           .header__menu-line
 
       .header__user.user
-        include ../svg/star1.jade
+        svg.user__svg
+          use(xlink:href='img/sprite.svg#figure')
 
         .user__img-wrap
           img.user__img(src="img/design/avatar.jpg", alt="User")
@@ -63,10 +61,12 @@ block content
         .user__title Личный сайт веб разработчика
 
       button.header__button(type="button")
-        include ../svg/arrow-down.jade
+        svg.header__button-bg
+          use(xlink:href='img/sprite.svg#arrow_down')
 
       .header__bottom.header__bottom_double
-        include ../svg/header-bottom.jade
+        svg.header__bottom-bg
+          use(xlink:href='img/sprite.svg#header_bottom')
 
     .about
       .about__row
@@ -74,7 +74,8 @@ block content
           .about__col-inner
             .headline.headline_light
               .headline__inner Обо мне
-              include ../svg/headline-bg
+              svg.headline__bg
+                use(xlink:href='img/sprite.svg#figure_2')
 
             .about__user
               .about__img-wrap
@@ -93,66 +94,66 @@ block content
             ul.about__skills
               li.about__skill
                 svg.circle(viewbox='0 0 120 120')
-                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15')
-                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15', data-percentage='133', style='stroke-dashoffset: 133px;')
+                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314')
+                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314', data-percentage='', style='stroke-dashoffset: 10px;')
                 .about__skill-title HTML5
 
               li.about__skill
                 svg.circle(viewbox='0 0 120 120')
-                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15')
-                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15', data-percentage='133', style='stroke-dashoffset: 133px;')
+                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314')
+                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314', data-percentage='', style='stroke-dashoffset: 10px;')
                 .about__skill-title CSS3
 
               li.about__skill
                 svg.circle(viewbox='0 0 120 120')
-                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15')
-                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15', data-percentage='133', style='stroke-dashoffset: 133px;')
+                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314')
+                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314', data-percentage='', style='stroke-dashoffset: 40px;')
                 .about__skill-title JavaScript & jQuery
 
             .headline__mini Backend
             ul.about__skills
               li.about__skill
                 svg.circle(viewbox='0 0 120 120')
-                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15')
-                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15', data-percentage='133', style='stroke-dashoffset: 133px;')
+                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314')
+                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314', data-percentage='', style='stroke-dashoffset: 300px;')
                 .about__skill-title PHP
 
               li.about__skill
                 svg.circle(viewbox='0 0 120 120')
-                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15')
-                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15', data-percentage='133', style='stroke-dashoffset: 133px;')
+                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314')
+                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314', data-percentage='', style='stroke-dashoffset: 314px;')
                 .about__skill-title mySQL
 
               li.about__skill
                 svg.circle(viewbox='0 0 120 120')
-                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15')
-                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15', data-percentage='133', style='stroke-dashoffset: 133px;')
+                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314')
+                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314', data-percentage='', style='stroke-dashoffset: 155px;')
                 .about__skill-title Node.js & npm
 
               li.about__skill
                 svg.circle(viewbox='0 0 120 120')
-                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15')
-                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15', data-percentage='133', style='stroke-dashoffset: 133px;')
+                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314')
+                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314', data-percentage='', style='stroke-dashoffset: 314px;')
                 .about__skill-title Monogo.db
 
             .headline__mini WorkFlow
             ul.about__skills
               li.about__skill
                 svg.circle(viewbox='0 0 120 120')
-                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15')
-                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15', data-percentage='133', style='stroke-dashoffset: 133px;')
+                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314')
+                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314', data-percentage='133', style='stroke-dashoffset: 100px;')
                 .about__skill-title Git
 
               li.about__skill
                 svg.circle(viewbox='0 0 120 120')
-                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15')
-                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15', data-percentage='133', style='stroke-dashoffset: 133px;')
+                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314')
+                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314', data-percentage='133', style='stroke-dashoffset: 80;')
                 .about__skill-title Gulp
 
               li.about__skill
                 svg.circle(viewbox='0 0 120 120')
-                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15')
-                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314.15', stroke-dashoffset='314.15', data-percentage='133', style='stroke-dashoffset: 133px;')
+                  circle.bottom(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314')
+                  circle.cover(cx='60', cy='60', r='50', fill='none', stroke-dasharray='314', stroke-dashoffset='314', data-percentage='133', style='stroke-dashoffset: 30px;')
                 .about__skill-title Bower
 
       .about__contacts
@@ -163,25 +164,32 @@ block content
           .about__list
             li.about__list-item
               .about__list-ico
-                include ../svg/skype.jade
+                svg.about__list-svg
+                  use(xlink:href='img/sprite.svg#skype')
               a.about__list-link(href="", title="") skype_kdn
 
             li.about__list-item
               .about__list-ico
-                include ../svg/mail.jade
+                svg.about__list-svg
+                  use(xlink:href='img/sprite.svg#mail')
               a.about__list-link(href="", title="") astahov@gmail.com
 
             li.about__list-item
               .about__list-ico
-                include ../svg/phone.jade
+                svg.about__list-svg
+                  use(xlink:href='img/sprite.svg#phone')
               a.about__list-link(href="", title="") +7 931 200 93 24
 
             li.about__list-item
               .about__list-ico
-                include ../svg/marker.jade
+                svg.about__list-svg
+                  use(xlink:href='img/sprite.svg#marker')
               a.about__list-link(href="", title="") Новосибирск, ул. Инская, д.14
 
         .about__map#map
 
 
   include ../common/footer.jade
+
+
+

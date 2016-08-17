@@ -1,16 +1,16 @@
 "use strict";
 
-$(function() {
+$(function () {
 
-	if($('.menu').length) {
+  if ($('.menu').length) {
 
-		// Активация меню
+    // Активация меню
 
-		$('.js-menu-toggle').on('click', function() {
-			$(this).toggleClass('header__menu_active');
-			$('.menu').toggleClass('menu_active');
-		});
+    $('.js-menu-toggle').on('click', function () {
+      $(this).toggleClass('header__menu_active');
+      $('.menu').toggleClass('menu_active');
+    });
 
-	}
+  }
 
 });

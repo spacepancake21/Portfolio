@@ -1455,7 +1455,7 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .header__bottom_double .header__bottom-bg-right {
+  .header__bottom_double .header__bottom-bg use:nth-of-type(2) {
     fill: #f4f5f0;
   }
 }

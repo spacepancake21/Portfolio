@@ -192,7 +192,7 @@
     &_double {
       .header__bottom-bg {
         fill: #f2f0e8;
-        &-right {
+        & use:nth-of-type(2) {
           @include from_1200 {
             fill: #f4f5f0;
           }

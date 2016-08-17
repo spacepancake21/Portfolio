@@ -74,7 +74,7 @@ gulp.task('svgstore', function () {
     .pipe(svgstore())
     .pipe(cheerio({
       run: function ($, file) {
-        $('#header_bottom').attr('preserveAspectRatio', 'none');
+        $('#header_bottom, #header_bottom_left,  #header_bottom_right').attr('preserveAspectRatio', 'none');
       },
       parserOptions: { xmlMode: true }
     }))

@@ -202,4 +202,8 @@ $(function () {
 
   });
 
+  $('.form__reset').on('click', function() {
+    $(formInput).removeClass('form__input_error');
+  });
+
 });

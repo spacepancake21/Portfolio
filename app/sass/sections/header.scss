@@ -47,7 +47,7 @@
     min-height: 600px;
 
     .header__user.user {
-      transform: translateX(-50%) translateY(-80%);
+      transform: translate3d(-50%, -50%, 0);
     }
 
     .header__button {
@@ -104,10 +104,10 @@
       .header__menu-line {
 
         &:nth-child(1) {
-          transform: translateY(10px) rotate(45deg);
+          transform: translate3d(0, 10px, 0) rotate(45deg);
 
           @include from_768 {
-            transform: translateY(15px) rotate(45deg);
+            transform: translate3d(0, 15px, 0) rotate(45deg);
           }
 
         }
@@ -117,10 +117,10 @@
         }
 
         &:nth-child(3) {
-          transform: translateY(-10px) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg);
 
           @include from_768 {
-            transform: translateY(-15px) rotate(-45deg);
+            transform: translate3d(0, -15px, 0) rotate(-45deg);
           }
 
         }
@@ -137,7 +137,7 @@
     left: 50%;
     width: 300px;
     padding: 25px 0 0 0;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate3d(-50%, -50%, 0);
 
     @include from_1200 {
       width: 500px;
@@ -171,52 +171,34 @@
     width: 100%;
     position: absolute;
     bottom: 0;
-    @include from_768 {
-      //bottom: -5px;
-    }
-    @include from_1200 {
-      //bottom: -10px;
-    }
-
     &-bg {
       fill: #faf8f0;
       display: block;
       width: 100%;
-
       &_left {
         width: 50%;
         left: 0;
       }
-
       &_right {
         width: 50%;
         right: 0;
       }
-
     }
-
     &_dark {
-
       & .header__bottom-bg {
         fill: #0d1120;
-        opacity: 0.85;
       }
-
     }
-
     &_double {
       .header__bottom-bg {
         fill: #f2f0e8;
-
         &-right {
           @include from_1200 {
             fill: #f4f5f0;
           }
         }
-
       }
     }
-
   }
 
   &__button {
@@ -234,17 +216,15 @@
     bottom: 15%;
     margin: auto;
     z-index: 1;
-
     &-bg {
       fill: #f4f5f0;
       width: 100%;
       height: 100%;
     }
-
   }
 
   &_slide-right {
-    transform: translateX(90%);
+    transform: translate3d(90%, 0, 0);
   }
 
 }

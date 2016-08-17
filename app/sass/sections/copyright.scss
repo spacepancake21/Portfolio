@@ -1,5 +1,5 @@
 /*
-	COPYRIGHTS
+  COPYRIGHTS
 */
 
 .copyright {
@@ -12,24 +12,18 @@
 
   &__name {
     display: block;
-
     @include from_768 {
       display: inline;
-
       &:after {
         content: " | ";
       }
-
     }
-
   }
 
   &__create {
-
     &:after {
       content: " | ";
     }
-
   }
 
 }

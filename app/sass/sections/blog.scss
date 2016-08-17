@@ -1,5 +1,5 @@
 /*
-	BLOG
+  BLOG
 */
 
 .blog {
@@ -141,7 +141,7 @@
       padding: 20px 110px 20px 20px;
     }
     &_slide-right {
-      transform: translateX(90%)
+      transform: translate3d(90%, 0, 0)
     }
   }
 

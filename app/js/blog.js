@@ -2,10 +2,15 @@
 
 $(function () {
 
+  var blogSidebar,
+    sidebarOffset;
+
   if ($('.blog').length) {
 
-    var blogSidebar = $('.blog__sidebar'),
+  $(window).on('load', function() {
+    blogSidebar = $('.blog__sidebar'),
       sidebarOffset = blogSidebar.offset().top;
+  });
 
     // Активация сайдбара
 

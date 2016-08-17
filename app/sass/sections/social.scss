@@ -1,5 +1,5 @@
 /*
-	SOCIAL
+  SOCIAL
 */
 
 .social {
@@ -17,11 +17,9 @@
   &__link {
     display: block;
     text-decoration: none;
-
     &:hover .social__icon {
       fill: #004cd1;
     }
-
   }
 
   &__icon {
